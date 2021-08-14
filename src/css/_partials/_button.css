@@ -1,0 +1,19 @@
+.btn {
+  @apply outline-none py-2.5 px-[1.625rem] leading-none text-white rounded-full 
+    inline-flex items-center justify-center transition-colors;
+  &-lg {
+    @apply py-4.5 px-[2.375rem] text-lg font-bold;
+  }
+  svg {
+    @apply ml-2.5;
+  }
+  &-blue {
+    @apply bg-blue hover:bg-blue-700;
+  }
+  &-blue-stroke {
+    @apply text-blue border border-blue hover:bg-blue-700 hover:text-white;
+  }
+  &-green {
+    @apply bg-green hover:bg-green-700;
+  }
+}

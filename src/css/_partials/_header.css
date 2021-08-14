@@ -1,0 +1,21 @@
+.header {
+  @apply py-5;
+  &__row {
+    @apply flex-y-center justify-between;
+  }
+  &__logo {
+    @apply w-[200px];
+  }
+  &__actions {
+    @apply space-x-5;
+  }
+  &__menu {
+    @apply flex-y-center space-x-10;
+    &-item {
+        @apply hover:text-blue focus:text-blue transition-colors;
+    }
+  }
+  &.fix {
+    @apply bg-bg-200;
+  }
+}

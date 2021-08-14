@@ -1,0 +1,48 @@
+@import "./_partials/tailwind";
+@import "./_partials/_common";
+@import "./_partials/_button";
+@import "./_partials/_header";
+@import "swiper/swiper-bundle.css";
+
+.hero {
+  @apply pt-[120px] bg-bg-400 bg-contain bg-center  overflow-hidden;
+  &__main {
+    @apply relative pb-20;
+  }
+  &__content {
+    @apply max-w-[660px] relative z-10;
+  }
+  &__description {
+    @apply max-w-[450px] font-medium text-text-subdued;
+  }
+  &__image {
+    @apply absolute right-[-120px] top-[40px] z-0 w-[720px];
+  }
+  &__actions {
+    @apply flex-y-center space-x-5 mt-10;
+  }
+  &__bg-1 {
+    @apply absolute left-[-80px] top-[-50px] bg-white 
+      w-[200px] h-[270px] rounded-2xl;
+  }
+  &__bg-2 {
+    @apply absolute right-[-90px] top-[35px] bg-white 
+      w-[370px] h-[200px] rounded-2xl;
+  }
+  &__bg-1,
+  &__bg-2 {
+    @apply pointer-events-none z-0;
+  }
+  &-clients {
+    @apply py-10 border-t border-[#E4E8F1] flex-y-center;
+    &__title {
+      @apply mr-20;
+    }
+    &__slider {
+      @apply flex-1;
+    }
+    &__slide {
+      @apply inline-block w-auto;
+    }
+  }
+}

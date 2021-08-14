@@ -1,0 +1,9 @@
+body {
+  @apply bg-bg-800 text-white;
+}
+
+.hero {
+  .heading {
+    @apply text-white;
+  }
+}
