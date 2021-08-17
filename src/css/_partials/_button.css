@@ -2,9 +2,9 @@
   @apply outline-none py-2.5 px-[1.625rem] leading-none text-white rounded-full 
     inline-flex items-center justify-center transition-colors;
   &-lg {
-    @apply py-4.5 px-[2.375rem] text-lg font-bold;
+    @apply p1 py-4 lg:py-4.5 px-[2.375rem] font-bold;
   }
-  svg {
+  svg, {
     @apply ml-2.5;
   }
   &-blue {
@@ -13,7 +13,11 @@
   &-blue-stroke {
     @apply text-blue border border-blue hover:bg-blue-700 hover:text-white;
   }
+  
   &-green {
     @apply bg-green hover:bg-green-700;
+  }
+  &-green-stroke {
+    @apply text-text border border-green hover:bg-green-700 hover:text-white;
   }
 }

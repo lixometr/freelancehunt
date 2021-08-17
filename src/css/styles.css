@@ -2,47 +2,230 @@
 @import "./_partials/_common";
 @import "./_partials/_button";
 @import "./_partials/_header";
+@import "./_partials/_tabs";
 @import "swiper/swiper-bundle.css";
 
 .hero {
-  @apply pt-[120px] bg-bg-400 bg-contain bg-center  overflow-hidden;
+  @apply pt-[12px] lg:pt-[120px] bg-bg-400 overflow-hidden dark:bg-bg-800;
   &__main {
-    @apply relative pb-20;
+    @apply relative pb-12 flex flex-col lg:pb-20;
   }
   &__content {
-    @apply max-w-[660px] relative z-10;
+    @apply order-2 lg:order-1 lg:max-w-[660px] lg:relative z-10;
   }
   &__description {
-    @apply max-w-[450px] font-medium text-text-subdued;
+    @apply max-w-[450px] text-sm lg:text-2xl !font-medium text-text-subdued;
   }
   &__image {
-    @apply absolute right-[-120px] top-[40px] z-0 w-[720px];
+    @apply w-full relative order-1 mb-3 
+    lg:right-[-70px] lg:mb-0 lg:order-2 lg:absolute lg:top-[40px] lg:z-0 lg:w-[720px]
+    xl:right-[-120px];
   }
   &__actions {
-    @apply flex-y-center space-x-5 mt-10;
+    @apply mt-10 flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:space-x-5;
+  }
+  &__btn {
+    @apply w-[280px] lg:w-auto;
   }
   &__bg-1 {
     @apply absolute left-[-80px] top-[-50px] bg-white 
-      w-[200px] h-[270px] rounded-2xl;
+      w-[200px] h-[270px] rounded-2xl dark:bg-black-700;
   }
   &__bg-2 {
-    @apply absolute right-[-90px] top-[35px] bg-white 
-      w-[370px] h-[200px] rounded-2xl;
+    @apply absolute right-[-40px] top-[35px] bg-white 
+      w-[370px] h-[200px] rounded-2xl xl:right-[-90px] dark:bg-black-700;
   }
   &__bg-1,
   &__bg-2 {
-    @apply pointer-events-none z-0;
+    @apply pointer-events-none z-0 hidden lg:block;
   }
   &-clients {
-    @apply py-10 border-t border-[#E4E8F1] flex-y-center;
+    @apply flex flex-col py-5 
+        lg:flex-row lg:items-center lg:py-10 border-none lg:border-solid lg:border-t lg:border-blue-200;
     &__title {
-      @apply mr-20;
+      @apply text-xs mb-3 lg:text-base lg:mb-0 lg:mr-20;
     }
+
     &__slider {
       @apply flex-1;
     }
     &__slide {
-      @apply inline-block w-auto;
+      @apply h-6 !important;
+      img {
+        @apply h-full;
+      }
     }
+  }
+}
+
+.for-orders {
+  &-slider {
+    @apply -mx-5 lg:px-5 !important;
+  }
+  &-item {
+    @apply flex flex-col relative min-h-[240px] shadow-main py-7 px-5 lg:p-7 bg-white rounded-xl
+    lg:min-h-[260px];
+    &__content {
+      @apply max-w-[350px] flex-1 flex flex-col items-start relative z-10 h-full;
+    }
+    &__title {
+      @apply h3 mb-2.5;
+      span {
+        @apply text-blue whitespace-nowrap;
+      }
+    }
+    &__description {
+      @apply p2;
+    }
+    &__btn {
+      @apply mt-auto;
+    }
+
+    &__image {
+      @apply absolute right-0 bottom-0 z-0 hidden lg:block;
+      img {
+        @apply h-[180px] w-auto;
+      }
+    }
+  }
+}
+
+.numbers {
+  &-slider {
+    @apply -mx-5 lg:px-5 !important;
+  }
+  .swiper-wrapper {
+    @apply items-stretch;
+  }
+  &-item {
+    @apply flex flex-col items-stretch w-[260px] min-h-[320px] h-auto p-5 rounded-xl shadow-main bg-white;
+    &__num {
+      @apply text-3xl leading-8 font-bold text-blue;
+    }
+    &__title {
+      @apply text-lg pb-2.5 border-b border-b-blue-200 mb-2.5 leading-4 mt-1.5;
+    }
+    &__value {
+      @apply text-green font-bold text-lg;
+    }
+    &__value-title {
+      @apply text-sm leading-4 max-w-[170px];
+    }
+    &__chart {
+      @apply my-1.5;
+      img {
+        @apply w-full;
+      }
+      &-tooltip {
+        @apply flex justify-between mt-2 font-bold text-xs text-text-disabled leading-3;
+      }
+    }
+    &__stat {
+      @apply pt-5 mt-auto text-lg;
+    }
+  }
+}
+
+.freelancers {
+  &-items {
+    @apply flex items-start;
+  }
+  &-item {
+    &-main {
+      @apply lg:w-[260px] flex-shrink-0 block shadow-main rounded-xl overflow-hidden mr-6;
+      &__content {
+        @apply hidden lg:block py-7 px-5 bg-white;
+      }
+      &__name {
+        @apply p1 font-bold;
+      }
+      &__image {
+        img {
+          @apply h-[225px] w-full object-cover;
+        }
+      }
+      &__category {
+        @apply p3 text-text-subdued mt-1;
+      }
+      &__stat {
+        @apply flex justify-between mt-5;
+      }
+      &__reviews {
+        @apply font-bold text-green text-sm;
+      }
+      &__rate {
+        @apply flex-y-center font-bold text-sm;
+        img {
+          @apply mr-2;
+        }
+      }
+    }
+    &-rest {
+      @apply flex-1 lg:flex items-start justify-start flex-wrap -m-3;
+      &__item {
+        @apply hidden lg:block p-3 relative w-1/2;
+        > div {
+          @apply relative pb-[100%];
+          > div {
+            @apply absolute inset-0;
+          }
+        }
+        img {
+          @apply w-full h-full object-cover rounded-xl shadow-main filter hover:brightness-75 transition-all;
+        }
+      }
+      &__more {
+        @apply block ;
+        > div {
+          > div {
+            @apply border border-blue flex-center flex-col rounded-xl  text-blue text-center  hover:bg-blue hover:text-white transition-colors;
+          }
+        }
+      }
+    }
+  }
+  .tags-block {
+    @apply mt-8 lg:mt-[3.125rem];
+  }
+}
+
+.for-freelancers {
+  &__row {
+    @apply flex flex-col items-center  lg:items-start lg:flex-row;
+  }
+  &__list,
+  &__actions,
+  &__image {
+    @apply max-w-[280px] lg:max-w-none mx-auto;
+  }
+  &__image {
+    @apply mb-3  lg:mb-0 lg:max-w-none lg:w-[420px] lg:mr-14;
+  }
+  &__content {
+    @apply flex-1;
+  }
+  &__list {
+    @apply lg:h3 !font-medium text-sm space-y-3  lg:text-2xl lg:space-y-6;
+    li {
+      @apply flex items-start max-w-[420px];
+      &::before {
+        content: "";
+        @apply w-[20px] mr-2.5 h-[20px] translate-y-0 lg:w-[25px] lg:h-[25px] lg:mr-5 lg:translate-y-0.5 bg-center bg-contain  flex-shrink-0 transform;
+        background-image: url(/img/icons/checkbox_blue.svg);
+      }
+    }
+  }
+  &__actions {
+    @apply mt-10 flex flex-col items-center space-y-2.5 lg:space-y-0 lg:flex-row lg:space-x-5;
+    .btn {
+      @apply flex-shrink-0 w-full lg:w-auto;
+    }
+    &-text {
+      @apply leading-6 text-sm text-center lg:text-left;
+    }
+  }
+
+  &__tooltip {
+    @apply mt-5  p3 !leading-5 lg:!leading-6 text-center text-text-disabled lg:text-text-subdued lg:text-left;
   }
 }

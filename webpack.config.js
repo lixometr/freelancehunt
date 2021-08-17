@@ -10,7 +10,6 @@ module.exports = {
   entry: {
     scripts: "./src/js/scripts.js",
     styles: "./src/css/styles.css",
-    dark: "./src/css/dark.css",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -58,7 +57,7 @@ module.exports = {
       output: path.join(process.cwd(), "dist", "[name].html"),
       // you can also add a [path] variable, which will emit the files with their relative path, like
       // output: path.join(process.cwd(), "build", [path], "[name].html"),
-
+      data: path.join(__dirname, "html-data.json"),
       // globbed path to partials, where folder/filename is unique
       partials: [path.join(process.cwd(), "src", "partials", "*.hbs")],
     }),

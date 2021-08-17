@@ -1,19 +1,29 @@
 .header {
-  @apply py-5;
+  @apply py-2.5 lg:py-5 border-b border-blue-200 lg:border-none;
   &__row {
     @apply flex-y-center justify-between;
   }
   &__logo {
-    @apply w-[200px];
+    @apply w-[140px] lg:w-[200px];
   }
   &__actions {
-    @apply space-x-5;
+
+    @apply space-x-5 hidden lg:flex items-center;
+  }
+  &__menu-wrapper {
+    @apply hidden lg:block;
   }
   &__menu {
-    @apply flex-y-center space-x-10;
+    @apply space-x-10 flex-y-center;
     &-item {
-        @apply hover:text-blue focus:text-blue transition-colors;
+      @apply hover:text-blue focus:text-blue transition-colors;
     }
+  }
+  &__burger {
+    @apply cursor-pointer block lg:hidden;
+  }
+  &__account {
+    @apply cursor-pointer block lg:hidden;
   }
   &.fix {
     @apply bg-bg-200;

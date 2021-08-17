@@ -1,0 +1,14 @@
+<div class="tags">
+    {{#each items}}
+    <a href="#" class="tags-item">
+        {{name}}
+        {{#if cnt}}
+            <span>{{cnt}}</span>
+        {{/if}}
+    </a>
+    {{/each}}
+
+    <a href="#" class="tags-more btn btn-blue-stroke">
+        Смотреть все {{> partials/arrow_right}}
+    </a>
+</div>

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{{!-- For dark mode: --}}
+{{!-- class="dark" --}}
 <html lang="ru">
 
 <head>
@@ -21,11 +23,11 @@
             <div class="hero__bg-1"></div>
             <div class="hero__bg-2"></div>
             <div class="hero__content">
-                <h1 class="mb-12">Лучшие фрилансеры для выполнения ваших задач</h1>
+                <h1 class="mb-2.5 lg:mb-12">Лучшие фрилансеры для выполнения ваших задач</h1>
                 <h3 class="hero__description">Работайте без рисков на сервисе фриланса №1 в Украине</h3>
                 <div class="hero__actions">
-                    <a href="#" class="btn btn-lg btn-green">Разместить проект</a>
-                    <a href="#" class="link-underline font-bold">Стать фрилансером</a>
+                    <a href="#" class="hero__btn btn btn-lg btn-green">Разместить проект</a>
+                    <a href="#" class="p1 link-underline font-bold">Стать фрилансером</a>
                 </div>
             </div>
             <img class="hero__image" src="/img/hero.png" srcset="/img/hero@2x.png 2x" alt="">
@@ -35,30 +37,209 @@
                 <div class="hero-clients__title">Нам доверяют</div>
                 <div class="hero-clients__slider clients-slider swiper-container">
                     <div class="swiper-wrapper">
+                        {{#each partners}}
                         <div class="swiper-slide hero-clients__slide">
-                            <img src="/img/clients/mastercard.svg" alt="">
+                            <img src="{{this}}" alt="" loading="lazy">
                         </div>
-                        <div class="swiper-slide hero-clients__slide">
-                            <img src="/img/clients/privatbank.svg" alt="">
-                        </div>
-                        <div class="swiper-slide hero-clients__slide">
-                            <img src="/img/clients/villa.svg" alt="">
-                        </div>
-                        <div class="swiper-slide hero-clients__slide">
-                            <img src="/img/clients/lun.svg" alt="">
-                        </div>
-                        <div class="swiper-slide hero-clients__slide">
-                            <img src="/img/clients/brain.svg" alt="">
-                        </div>
-                        <div class="swiper-slide hero-clients__slide">
-                            <img src="/img/clients/autoria.svg" alt="">
-                        </div>
+                        {{/each}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="for-orders section-offset">
+        <div class="container">
+            <div class="section-title">
+                <div class="pre-title">Заказчикам</div>
+                <h2>Выбирайте удобный формат сотрудничества</h2>
+            </div>
+            <div class="swiper-container for-orders-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide for-orders-item">
+                        <div class="for-orders-item__content">
+                            <div class="for-orders-item__title">Создайте <span>фриланс-проект</span></div>
+                            <div class="for-orders-item__description">
+                                получите лучшие предложения по цене, срокам от
+                                фрилансеров
+                            </div>
+                            <a href="#" class="for-orders-item__btn btn btn-green">Разместить проект</a>
+                        </div>
+                        <div class="for-orders-item__image">
+                            <img src="/img/clock_man.png" loading="lazy" srcset="/img/clock_man@2x.png"
+                                alt="main-clock">
+                        </div>
+                    </div>
+                    <div class="swiper-slide for-orders-item">
+                        <div class="for-orders-item__content">
+                            <div class="for-orders-item__title">Опубликуйте <span>конкурс</span></div>
+                            <div class="for-orders-item__description">
+                                и фрилансеры предложат уже готовые решения
+                                <div class="p4 mt-1.5"><span class="transform translate-y-1 inline-block mr-1">*</span>
+                                    для категории
+                                    Дизайн и Текста</div>
+                            </div>
+                            <a href="#" class="for-orders-item__btn btn btn-green-stroke">Открыть конкурс</a>
+                        </div>
+                        <div class="for-orders-item__image">
+                            <img src="/img/bulb_man.png" loading="lazy" srcset="/img/bulb_man@2x.png" alt="main-clock">
+                        </div>
+                    </div>
+                </div>
+                <div class="for-orders-slider__pagination slider-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="freelancers section-offset">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    Выбирайте проверенных исполнителей
+                </h2>
+            </div>
+            <div class="freelancers-tabs categories-tabs">
+                <div class="swiper-container tabs-categories">
+                    <div class="swiper-wrapper">
+                        {{#each freelancersCategories}}
+                        <a href="#" data-index="{{@index}}"
+                            class="swiper-slide tabs-categories__item {{#unless @index  }}active{{/unless}}">{{this}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+                {{#each freelancers}}
+                <div class="categories-tabs__content freelancers-tabs__content {{#unless @index  }}active{{/unless}}"
+                    data-index="{{@index}}">
+                    <div class="freelancers-items">
+                        <a href="#" class="freelancers-item-main">
+                            <div class="freelancers-item-main__image">
+                                <img loading="lazy" src="{{main.image}}" alt="freelancer">
+                            </div>
+                            <div class="freelancers-item-main__content">
+                                <div class="freelancers-item-main__name">{{main.name}}</div>
+                                <div class="freelancers-item-main__category">{{main.category}}</div>
+                                <div class="freelancers-item-main__stat">
+                                    <div class="freelancers-item-main__rate">
+                                        <img loading="lazy" src="/img/icons/star.svg" alt="star">
+                                        {{main.rate}} из 10
+                                    </div>
+                                    <div class="freelancers-item-main__reviews">{{main.reviews}}</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="freelancers-item-rest">
+                            {{#each this.items}}
+                            <a href="#" class="freelancers-item-rest__item">
+                                <div>
+                                    <div>
+                                        <img loading="lazy" src="{{this}}" alt="freelancer">
+                                    </div>
+                                </div>
+                            </a>
+                            {{/each}}
+                            <a href="#" class="freelancers-item-rest__item freelancers-item-rest__more">
+                                <div>
+                                    <div>
+                                        <span class="text-lg font-bold leading-5">{{more.cnt}}</span>
+                                        <span class="text-xs lg:text-sm mt-1">{{more.text}}</span>
+                                        <span class="mt-3">{{> partials/arrow_right }}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tags-block">
+                        <div class="tags-block__title   ">
+                            Топ специализации <a href="#" class="link text-blue">{{categoryName}}</a>
+                        </div>
+                        {{> partials/tags items=this.tags }}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section class="numbers section-offset">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    Фрилансхант в цифрах
+                </h2>
+            </div>
+            <div class="numbers-slider swiper-container">
+                <div class="swiper-wrapper">
+                    {{#each numbers}}
+                    <div class="swiper-slide numbers-item">
+                        <div class="numbers-item__num">
+                            {{num}}
+                        </div>
+                        <div class="numbers-item__title">
+                            {{title}}
+                        </div>
+                        <div class="numbers-item__value">
+                            {{value}}
+                        </div>
+                        <div class="numbers-item__value-title">
+                            {{valueTitle}}
+                        </div>
+                        <div class="numbers-item__chart">
+                            <img loading="lazy" src="{{img}}" alt="chart">
+                            <div class="numbers-item__chart-tooltip">
+                                <div>2005</div>
+                                <div>2021</div>
+                            </div>
+                        </div>
+                        <div class="numbers-item__stat">
+                            {{stat}}
+                        </div>
+                    </div>
+                    {{/each}}
 
+                </div>
+                <div class="numbers-slider__pagination slider-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="for-freelancers section-offset">
+        <div class="container">
+            <div class="section-title">
+                <div class="pre-title">
+                    Фрилансерам
+                </div>
+                <h2>
+                    Почему фрилансеры выбирают Freelancehunt
+                </h2>
+            </div>
+            <div class="for-freelancers__row">
+                <div class="for-freelancers__image">
+                    <img loading="lazy" src="/img/rocket_man.png" srcset="/img/rocket_man@2x.png" alt="rocket-man">
+                </div>
+                <div class="for-freelancers__content">
+                    <ul class="for-freelancers__list">
+                        <li>Проекты для новичков и профи</li>
+                        <li>Честный рейтинг</li>
+                        <li>Поиск постоянной работы</li>
+                        <li>Безопасное сотрудничество
+                            с гарантированной оплатой</li>
+                    </ul>
+                    <div class="for-freelancers__actions">
+                        <a href="#" class="btn btn-lg btn-green">Стать фрилансером</a>
+                        <div class="for-freelancers__actions-text">Ищите постоянную работу? - <br> смотрите открытые <a
+                                href="#" class="link-underline font-bold">Вакансии</a></div>
+                    </div>
+                    <div class="for-freelancers__tooltip">После регистрации все исполнители проходят обязательную
+                        проверку профиля. После этого
+                        работа бесплатна — вам не обязательно покупать <img src="/img/icons/pro.svg" alt="pro"
+                            class="inline-block mx-1"> аккаунт.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects section-offset">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ищите работу среди <span class="text-green">3400</span> открытых фриланс-проектов</h2>
+            </div>
+        </div>
+    </section>
     {{> partials/footer}}
     <script src="/js/scripts.js"></script>
 </body>

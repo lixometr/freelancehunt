@@ -1,0 +1,28 @@
+.categories-tabs {
+  @apply flex flex-col lg:flex-row lg:items-start;
+  .tabs-categories {
+    @apply lg:w-[400px] lg:flex-shrink-0 lg:mr-16;
+    .swiper-wrapper {
+      @apply lg:space-y-4 lg:flex-col;
+    }
+    &__item {
+      @apply relative flex h3 text-text-subdued !font-medium hover:text-blue pl-5;
+      &::before {
+        content: "";
+        @apply h-full w-1 bg-blue block absolute left-0 top-0 bottom-0 mr-5 flex-shrink-0 opacity-0;
+      }
+      &.active {
+        @apply text-black !font-bold hover:text-black;
+      }
+      &.active::before {
+        @apply opacity-100;
+      }
+    }
+  }
+  .categories-tabs__content {
+    @apply hidden;
+    &.active {
+      @apply block;
+    }
+  }
+}

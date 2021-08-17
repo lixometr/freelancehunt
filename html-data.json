@@ -1,0 +1,114 @@
+{
+    "partners": [
+        "/img/clients/mastercard.svg",
+        "/img/clients/privatbank.svg",
+        "/img/clients/villa.svg",
+        "/img/clients/lun.svg",
+        "/img/clients/brain.svg",
+        "/img/clients/autoria.svg"
+    ],
+    "numbers": [
+        {
+            "num": "82 496",
+            "title": "заказчиков",
+            "value": "9,6 из 10",
+            "valueTitle": "средняя оценка заказчиков",
+            "img": "/img/charts/1.svg",
+            "stat": "494 активно"
+        },
+        {
+            "num": "198 340",
+            "title": "фрилансеров",
+            "value": "9,8 из 10",
+            "valueTitle": "средняя оценка работы",
+            "img": "/img/charts/2.svg",
+            "stat": "2 054 активно"
+        },
+        {
+            "num": "9 477",
+            "title": "вакансий",
+            "value": "62",
+            "valueTitle": "среднее количество откликов",
+            "img": "/img/charts/3.svg",
+            "stat": "902 за неделю"
+        },
+        {
+            "num": "871 164",
+            "title": "проектов",
+            "value": "97%",
+            "valueTitle": "успешных проектов",
+            "img": "/img/charts/4.svg",
+            "stat": "1 780 за неделю"
+        }
+    ],
+    "freelancersCategories": [
+        "Программирование",
+        "Дизайн и арт",
+        "Услуги",
+        "Аудио и видео",
+        "Продвижение",
+        "Архитектура и инжиниринг",
+        "Мобильные приложения",
+        "Администрирование",
+        "Аутсорсинг и консталтинг",
+        "Переводы",
+        "Работа с текстами"
+    ],
+    "freelancers": [
+        {
+            "categoryName": "Программирование",
+            "more": {
+                "cnt": "20 342",
+                "text": "программиста"
+            },
+            "main": {
+                "image": "/img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "718 отзывов"
+            },
+            "items": [
+                "/img/freelancers/1.png",
+                "/img/freelancers/2.png",
+                "/img/freelancers/3.png"
+            ],
+            "tags": [
+                {"name": "php"},
+                {"name": "Python", "cnt": 2},
+                {"name": "Ruby", "cnt": 2},
+                {"name": "Веб-программирование", "cnt": 2},
+                {"name": "Персинг данных", "cnt": 2},
+                {"name": "Встраиваемые системы и микроконтроллеры", "cnt": 2},
+                {"name": "Защита ПО и безопасность", "cnt": 2},
+                {"name": "Swift", "cnt": 2},
+                {"name": "Машинное обучение", "cnt": 2}
+            ]
+        },
+        {
+            "categoryName": "Дизайн и арт",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "/img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "/img/freelancers/3.png",
+                "/img/freelancers/2.png",
+                "/img/freelancers/1.png"
+            ],
+            "tags": [
+                {"name": "php", "cnt": 2},
+                {"name": "Python", "cnt": 2},
+                {"name": "Ruby", "cnt": 2},
+                {"name": "Машинное обучение", "cnt": 2}
+            ]
+        }
+    ]
+}

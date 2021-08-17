@@ -1,33 +1,16 @@
 body {
-  @apply font-main font-medium text-text text-base leading-[1.2] bg-bg-200;
+  @apply font-main font-medium p2 text-text leading-[1.2] bg-bg-200 dark:text-white dark:bg-bg-800;
+}
+h1 {
+  @apply h1;
+}
+h2 {
+  @apply h2;
+}
+h3 {
+  @apply h3;
 }
 
-h1,
-.h1 {
-  @apply text-6xl rounded-xl font-bold;
-}
-h2,
-.h2 {
-  @apply text-3xl font-bold;
-}
-
-h3,
-.h3 {
-  @apply text-2xl font-bold;
-}
-
-.p1 {
-  @apply text-lg;
-}
-.p2 {
-  @apply text-base;
-}
-.p3 {
-  @apply text-sm;
-}
-.p4 {
-  @apply text-xs font-bold text-text-disabled;
-}
 .container {
   @apply max-w-[1160px] mx-auto px-5;
 }
@@ -43,8 +26,52 @@ h3,
   @apply underline hover:text-blue transition-colors;
 }
 
+.section-offset {
+  @apply pt-20 lg:pt-[130px];
+}
+.pre-title {
+  @apply text-sm text-text-disabled font-normal uppercase;
+  letter-spacing: 0.4rem;
+}
+.section-title {
+  @apply text-left lg:text-center mb-7 lg:mb-[3.125rem];
+  .pre-title {
+    @apply mb-4 lg:mb-2.5;
+  }
+}
 
-@define-mixin bg $url, $url2x{
+.slider-pagination {
+  @apply flex-center pt-7;
+  .swiper-pagination-bullet {
+    @apply ml-0 mr-2.5 last:mr-0 opacity-50 bg-text-disabled hover:opacity-80 !important;
+    &-active {
+      @apply bg-blue opacity-100 hover:opacity-100 !important;
+    }
+  }
+}
+
+.tags-block {
+  &__title {
+    @apply mb-5 lg:p1 text-sm font-bold;
+  }
+  .tags-more {
+    @apply py-0 h-[2.125rem] px-4 text-xs lg:text-sm !important;
+  }
+  .tags {
+    @apply flex flex-wrap;
+    &-item {
+      @apply inline-flex items-center justify-center whitespace-nowrap 
+          h-[2.125rem] px-4 rounded-full bg-bg-600  text-text-subdued
+          mr-2.5 mb-2.5 text-xs hover:bg-blue-700 hover:text-white transition-colors 
+          lg:text-sm;
+      span {
+        @apply ml-2.5;
+      }
+    }
+  }
+}
+
+@define-mixin bg $url, $url2x {
   background-image: url($url);
   @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     & {

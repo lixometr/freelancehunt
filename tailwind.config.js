@@ -1,5 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 const pluginFlex = require("./tailwind-plugins/flex");
+const pluginFonts = require("./tailwind-plugins/fonts");
+const screens = require("./tailwind-plugins/screens");
 module.exports = {
   purge: ["./src/**/*.hbs", "./src/css/**/*.css"],
   darkMode: "class", // or 'media' or 'class'
@@ -24,6 +26,7 @@ module.exports = {
         700: "#27A05E",
       },
       blue: {
+        200: "#E4E8F1",
         300: "#8B9BF9",
         DEFAULT: "#4C65F6",
         700: "#2745F4",
@@ -48,17 +51,10 @@ module.exports = {
     fontFamily: {
       main: ["Montserrat", "sans-serif"],
     },
-    bosShadow: {
+    boxShadow: {
       main: "0px 10px 20px rgba(35, 42, 66, 0.07)",
     },
-    screens: {
-      xl: { max: "1400px" },
-      lg: { max: "1200px" },
-      md: { max: "992px" },
-      sm: { max: "760px" },
-      xs: { max: "550px" },
-      xxs: { max: "350px" },
-    },
+    screens,
     extend: {
       spacing: {
         4.5: "1.125rem",
@@ -73,5 +69,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [pluginFlex],
+  plugins: [pluginFlex, pluginFonts],
 };
