@@ -3,12 +3,12 @@
     <a href="#" class="tags-item">
         {{name}}
         {{#if cnt}}
-            <span>{{cnt}}</span>
+        <span>{{cnt}}</span>
         {{/if}}
     </a>
     {{/each}}
 
-    <a href="#" class="tags-more btn btn-blue-stroke">
-        Смотреть все {{> partials/arrow_right}}
+    <a href="#" class="tags-more btn btn-blue-stroke" data-less="Cкрыть">
+        <span> {{more}}</span> {{> partials/arrow_right}}
     </a>
 </div>

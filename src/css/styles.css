@@ -2,11 +2,17 @@
 @import "./_partials/_common";
 @import "./_partials/_button";
 @import "./_partials/_header";
+@import "./_partials/_footer";
 @import "./_partials/_tabs";
+@import "./_partials/_accordion";
+@import "./_partials/_menu-auth";
+@import "./_partials/_menu-mob";
+@import "./_partials/_tags";
+@import "./_partials/_animations";
 @import "swiper/swiper-bundle.css";
 
 .hero {
-  @apply pt-[12px] lg:pt-[120px] bg-bg-400 overflow-hidden dark:bg-bg-800;
+  @apply pt-[3.5rem] lg:pt-[12rem] bg-bg-400 overflow-hidden dark:bg-bg-800;
   &__main {
     @apply relative pb-12 flex flex-col lg:pb-20;
   }
@@ -175,7 +181,7 @@
         }
       }
       &__more {
-        @apply block ;
+        @apply block;
         > div {
           > div {
             @apply border border-blue flex-center flex-col rounded-xl  text-blue text-center  hover:bg-blue hover:text-white transition-colors;
@@ -227,5 +233,111 @@
 
   &__tooltip {
     @apply mt-5  p3 !leading-5 lg:!leading-6 text-center text-text-disabled lg:text-text-subdued lg:text-left;
+  }
+}
+
+.vacancies {
+  &__row {
+    @apply flex flex-col items-center  lg:items-start lg:flex-row;
+  }
+  &__text {
+    @apply h3 !font-medium;
+  }
+  &__actions,
+  &__image {
+    @apply max-w-[280px] lg:max-w-none mx-auto;
+  }
+  &__image {
+    @apply mb-3 lg:mb-0 lg:max-w-none lg:w-[420px] lg:mr-14;
+  }
+  &__content {
+    @apply flex-1;
+  }
+
+  &__actions {
+    @apply mt-10 flex flex-col items-center space-y-2.5 lg:space-y-0 lg:flex-row lg:space-x-5;
+    .btn {
+      @apply flex-shrink-0 w-full lg:w-auto;
+    }
+    &-text {
+      @apply leading-6 text-sm text-center lg:text-left;
+    }
+  }
+  &__tags {
+    @apply mt-[4.375rem];
+  }
+  .tags-block {
+    &__title {
+      @apply text-2xl lg:text-lg;
+    }
+  }
+}
+
+.info {
+  &__description {
+    @apply text-sm mb-[3.125rem];
+  }
+  &__row {
+    @apply flex flex-col items-center lg:items-start lg:flex-row lg:space-x-[6rem];
+  }
+  &-col {
+    @apply flex-1;
+  }
+  h3 {
+    @apply border-b-2 border-blue pb-2 mb-7;
+  }
+  p,
+  .p {
+    @apply mb-6 last:mb-0;
+  }
+  ul {
+    @apply pl-1.5;
+    li {
+      @apply list-none pl-3 relative;
+      &::before {
+        content: "";
+        @apply absolute left-0 top-2.5 block w-[3px] h-[3px] bg-black rounded-full ;
+      }
+    }
+  }
+  ol {
+    @apply pl-4;
+    li {
+      @apply list-decimal;
+    }
+  }
+  &-block {
+    @apply mb-[3.125rem] text-sm;
+  }
+  &-table-block {
+    &__description {
+      @apply mb-7 text-sm;
+    }
+  }
+  &-table-wrapper {
+    @apply overflow-auto pb-5 mb-5 lg:mb-0 -mr-5;
+  }
+  &-table {
+    @apply rounded-lg border border-black text-sm p-0 text-left w-[1120px];
+    border-collapse: separate;
+    border-spacing: 0;
+    th {
+      @apply font-bold;
+    }
+    th,
+    td {
+      @apply py-4 px-5 border-b border-black border-r last:border-r-0;
+    }
+
+    tr {
+      &:last-child {
+        td {
+          @apply border-b-0;
+        }
+      }
+      > td {
+        @apply first:font-bold;
+      }
+    }
   }
 }

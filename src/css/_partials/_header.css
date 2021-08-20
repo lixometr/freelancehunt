@@ -1,5 +1,5 @@
 .header {
-  @apply py-2.5 lg:py-5 border-b border-blue-200 lg:border-none;
+  @apply py-2.5 lg:py-5 bg-bg-200 lg:bg-transparent border-b border-blue-200 lg:border-none fixed top-0 left-0 right-0 z-200 transition-all;
   &__row {
     @apply flex-y-center justify-between;
   }
@@ -26,6 +26,6 @@
     @apply cursor-pointer block lg:hidden;
   }
   &.fix {
-    @apply bg-bg-200;
+    @apply bg-bg-200 ;
   }
 }

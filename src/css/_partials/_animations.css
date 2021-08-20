@@ -1,0 +1,24 @@
+.t-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.t-fadeOut {
+  animation: fadeOut 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px)
+  }
+}

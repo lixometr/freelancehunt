@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const production = process.env.NODE_ENV === "production";
 module.exports = {
-  mode: "production",
   entry: {
     scripts: "./src/js/scripts.js",
     styles: "./src/css/styles.css",

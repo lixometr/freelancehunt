@@ -1,3 +1,109 @@
-<footer>
-    
+<footer class="footer">
+    <div class="container">
+        <div class="footer__row">
+            {{#each footer.cols}}
+            <div class="footer-col">
+                <div class="footer-col__title accordion-header">
+                    <span>
+                        {{name}}
+                    </span>
+                    {{> partials/arrow_down}}
+
+                </div>
+                <div class="footer-col__content accordion-content">
+                    <ul class="footer-col__items">
+                        {{#each items}}
+                        <li class="footer-col__item">
+                            <a href="{{link}}">
+                                {{name}}
+                                {{#if new}}
+                                <span class="label-new">new</span>
+                                {{/if}}
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+            <div class="footer-col">
+                <div class="footer-col__title accordion-header">
+                    <span>
+                        Помощь и поддержка
+                    </span>
+                    {{> partials/arrow_down}}
+                </div>
+                <div class="footer-col__content accordion-content divide-y divide-white divide-opacity-20">
+                    <div class="pb-5">
+                        <ul class="footer-col__items">
+                            <li class="footer-col__item">
+                                <a href="#">
+                                    База знаний
+                                </a>
+                            </li>
+                            <li class="footer-col__item">
+                                <a href="#">
+                                    Статьи о фрилансе
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="py-5">
+                        <ul class="footer-col__items">
+                            <li class="footer-col__item">
+                                <a href="#">
+                                    Регистрация
+                                </a>
+                            </li>
+                            <li class="footer-col__item">
+                                <a href="#">
+                                    Забыли пароль?
+                                </a>
+                            </li>
+                            <li class="footer-col__item">
+                                <a href="#">
+                                    Написать в поддержку
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-language pt-5">
+                        <span class="mr-5"> Изменить язык</span>
+                        <div class="footer-language__items">
+                            <a href="#" class="footer-language__item">
+                                <img src="/img/icons/usa.svg" alt="usa">
+                            </a>
+                            <a href="#" class="footer-language__item">
+                                <img src="/img/icons/ukraine.svg" alt="usa">
+                            </a>
+                            <a href="#" class="footer-language__item">
+                                <img src="/img/icons/russia.svg" alt="usa">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__row">
+                <div class="footer-bottom__copyright">
+                    Сделано в Украине © 2005-2021
+                </div>
+                <div class="footer-bottom__links">
+                    <a href="#">Правила сервиса</a>
+                    <a href="#">Конфиденциальность</a>
+                    </ul>
+                </div>
+                <div class="footer-soc footer-bottom__soc">
+                    <span>
+                        Подписывайтесь
+                    </span>
+                    {{> partials/footer-soc}}
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

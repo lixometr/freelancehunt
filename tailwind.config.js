@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     colors: {
       transparent: "transparent",
-      white: "#FFFFFF",
+      white: "#FEFEFE",
       yellow: {
         300: "#FBDD88",
         DEFAULT: "#F9C846",
@@ -64,6 +64,12 @@ module.exports = {
         "3xl": "2rem",
         "6xl": "3.5rem",
       },
+      zIndex: {
+        100: 100,
+        200: 200,
+        300: 300,
+        400: 400,
+      }
     },
   },
   variants: {

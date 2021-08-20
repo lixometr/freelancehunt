@@ -1,0 +1,37 @@
+.tags-block {
+  &__title {
+    @apply mb-5 lg:p1 text-sm font-bold;
+  }
+  .tags-more {
+    @apply py-0 h-[2.125rem] px-4 text-xs lg:text-sm !important;
+  }
+  .tags {
+    @apply flex flex-wrap;
+    &-item {
+      @apply hidden items-center justify-center whitespace-nowrap 
+            h-[2.125rem] px-4 rounded-full bg-bg-600  text-text-subdued
+            mr-2.5 mb-2.5 text-xs hover:bg-blue-700 hover:text-white transition-colors 
+            lg:text-sm;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      /* &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9), */
+      &:nth-child(10) {
+        @apply inline-flex;
+      }
+      span {
+        @apply ml-2.5;
+      }
+    }
+    &.open {
+      .tags-item {
+        @apply inline-flex !important;
+      }
+    }
+  }
+}

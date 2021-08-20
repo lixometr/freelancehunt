@@ -1,0 +1,17 @@
+.accordion {
+  &-content {
+    @apply transition-all duration-300;
+  }
+  &-header {
+    svg {
+      @apply transition-all transform;
+    }
+  }
+  &.open & {
+    &-header {
+      svg {
+        @apply rotate-180;
+      }
+    }
+  }
+}
