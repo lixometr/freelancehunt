@@ -133,12 +133,13 @@
 }
 
 .freelancers {
+  @apply overflow-hidden;
   &-items {
     @apply flex items-start;
   }
   &-item {
     &-main {
-      @apply lg:w-[260px] flex-shrink-0 block shadow-main rounded-xl overflow-hidden mr-6;
+      @apply flex-1 lg:flex-none lg:w-[260px] flex-shrink-0 block shadow-main rounded-xl overflow-hidden mr-5 lg:mr-6;
       &__content {
         @apply hidden lg:block py-7 px-5 bg-white;
       }
@@ -146,8 +147,10 @@
         @apply p1 font-bold;
       }
       &__image {
+        @apply pb-[100%] lg:pb-0 relative;
+
         img {
-          @apply h-[225px] w-full object-cover;
+          @apply h-full lg:h-[225px] w-full object-cover absolute inset-0 lg:relative filter hover:brightness-75 transition-all;
         }
       }
       &__category {
@@ -167,25 +170,27 @@
       }
     }
     &-rest {
-      @apply flex-1 lg:flex items-start justify-start flex-wrap -m-3;
+      @apply flex-1 lg:flex items-start justify-start flex-wrap lg:-m-3;
       &__item {
-        @apply hidden lg:block p-3 relative w-1/2;
-        > div {
-          @apply relative pb-[100%];
-          > div {
-            @apply absolute inset-0;
-          }
-        }
+        @apply hidden lg:block  relative w-full lg:w-1/2 lg:p-3;
+
         img {
           @apply w-full h-full object-cover rounded-xl shadow-main filter hover:brightness-75 transition-all;
         }
       }
+      &__inner {
+        @apply relative pb-[100%];
+      }
+      &__content {
+        @apply absolute inset-0;
+      }
       &__more {
         @apply block;
-        > div {
-          > div {
-            @apply border border-blue flex-center flex-col rounded-xl  text-blue text-center  hover:bg-blue hover:text-white transition-colors;
-          }
+      }
+      &__more & {
+        &__content {
+          @apply border border-blue flex-center flex-col rounded-xl  text-blue text-center  
+            hover:bg-blue hover:text-white transition-colors;
         }
       }
     }
@@ -233,6 +238,15 @@
 
   &__tooltip {
     @apply mt-5  p3 !leading-5 lg:!leading-6 text-center text-text-disabled lg:text-text-subdued lg:text-left;
+  }
+}
+.projects {
+  @apply overflow-hidden;
+  &-image {
+    @apply mb-8 lg:mb-[3.125rem] pb-[45%] relative;
+    img {
+      @apply absolute inset-0 h-full w-full object-cover rounded-xl filter hover:brightness-75 transition-all;
+    }
   }
 }
 
@@ -296,7 +310,7 @@
       @apply list-none pl-3 relative;
       &::before {
         content: "";
-        @apply absolute left-0 top-2.5 block w-[3px] h-[3px] bg-black rounded-full ;
+        @apply absolute left-0 top-2.5 block w-[3px] h-[3px] bg-black rounded-full;
       }
     }
   }

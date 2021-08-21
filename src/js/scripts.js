@@ -5,18 +5,27 @@ import { Accordion } from "./accordion";
 import { TabsCategories } from "./tabs-categories";
 import { bpLess, onReady } from "./helpers.js";
 import { Tags } from "./tags";
+import { Menu } from "./menu";
 onReady(() => {
   (function () {
-    const accordions = [];
+    let accordions = [];
+    let isInited = false;
     const checkResize = () => {
       if (bpLess("lg")) {
+        if (isInited) return;
         document.querySelectorAll(".footer-col").forEach((item) => {
           item.classList.add("accordion");
           const acc = new Accordion(item, false);
           accordions.push(acc);
         });
+        isInited = true;
       } else {
-        accordions.forEach((acc) => acc.open());
+        if (!isInited) return;
+        accordions.forEach((acc) => {
+          acc.destroy();
+        });
+        accordions = [];
+        isInited = false;
       }
     };
     window.addEventListener("resize", checkResize);
@@ -30,5 +39,16 @@ onReady(() => {
   })();
   (function () {
     new TabsCategories(".freelancers-tabs");
+    new TabsCategories(".projects-tabs");
+  })();
+  (function () {
+    new Menu(".menu-mob", ".menu-mob-overlay", ".burger");
+    document.querySelectorAll(".menu-mob__item").forEach((item) => {
+      new Accordion(item, false);
+    });
+  })();
+  (function () {
+    new Menu(".menu-auth", ".menu-auth-overlay", ".header-account");
+   
   })();
 });

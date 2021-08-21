@@ -22,7 +22,7 @@ export class TabsCategories {
       (block) => block.getAttribute("data-index") === String(this.activeIdx)
     );
   }
-  async selectItem(index) {
+   selectItem(index) {
     const prevIdx = this.activeIdx;
     if (index === prevIdx) return;
     this.activeIdx = index;
@@ -95,9 +95,9 @@ export class TabsCategories {
         threshold: 5,
         spaceBetween: 20,
       });
-      this.categoriesSlider.on('reachEnd', () => {
-        console.log('end')
-      })
+      // this.categoriesSlider.on('reachEnd', () => {
+      //   console.log('end')
+      // })
       this.categoriesSlider.on("snapIndexChange", (e) => {
         const total = e.slides.length - 2;
         const active = e.snapIndex;

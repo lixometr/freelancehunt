@@ -1,13 +1,12 @@
 .header {
-  @apply py-2.5 lg:py-5 bg-bg-200 lg:bg-transparent border-b border-blue-200 lg:border-none fixed top-0 left-0 right-0 z-200 transition-all;
+  @apply py-2.5 lg:h-20 lg:py-5 bg-bg-200 lg:bg-transparent border-b border-blue-200 lg:border-none fixed top-0 left-0 right-0 z-200 transition-all;
   &__row {
-    @apply flex-y-center justify-between;
+    @apply flex-y-center justify-between h-full;
   }
   &__logo {
     @apply w-[140px] lg:w-[200px];
   }
   &__actions {
-
     @apply space-x-5 hidden lg:flex items-center;
   }
   &__menu-wrapper {
@@ -16,7 +15,10 @@
   &__menu {
     @apply space-x-10 flex-y-center;
     &-item {
-      @apply hover:text-blue focus:text-blue transition-colors;
+      @apply hover:text-blue  transition-colors;
+      &.open {
+        @apply text-blue;
+      }
     }
   }
   &__burger {
@@ -26,6 +28,78 @@
     @apply cursor-pointer block lg:hidden;
   }
   &.fix {
-    @apply bg-bg-200 ;
+    @apply bg-bg-200;
+  }
+}
+
+.header-menu {
+  @apply invisible opacity-0 fixed top-20 left-0 right-0 min-h-[300px] bg-white z-100 shadow-main py-5
+    border-t border-blue-200 transition-all transform -translate-y-4;
+  &.open {
+    @apply lg:visible opacity-100 translate-y-0;
+  }
+
+  &__row {
+    @apply flex items-start max-h-full;
+  }
+  &__items {
+    @apply flex-1 flex flex-wrap -mx-2 -my-1;
+
+    &-top {
+      @apply w-full flex justify-between mb-4 pt-2;
+    }
+    &-tooltip {
+      @apply  flex-1 font-bold text-text-disabled uppercase text-xs pl-[3.75rem] leading-none;
+      letter-spacing: 0.1rem;
+      > span {
+        @apply relative pl-4;
+        &:before {
+          content: "";
+          @apply absolute top-1/2 transform -translate-y-1/2 left-0 w-0.5 h-2.5 bg-yellow;
+        }
+      }
+    }
+  }
+  &__image {
+    @apply w-[300px] h-[260px] flex-shrink-0 ml-14 relative;
+    img {
+      @apply absolute inset-0 h-full w-full object-contain;
+    }
+  }
+  &-item-col {
+    @apply w-1/2 px-2 py-1;
+  }
+  &-item {
+    @apply py-3 px-4 rounded-xl flex items-start
+      hover:bg-blue hover:bg-opacity-5 transition-all relative;
+    &::before {
+      content: "";
+      @apply absolute right-4 top-1/2 transform -translate-y-1/2 bg-contain bg-center bg-no-repeat
+        w-3.5 h-2.5 opacity-0 pointer-events-none transition-all;
+      background-image: url(/img/icons/arrow_right.svg);
+    }
+    &__image {
+      @apply w-8 mr-4 flex-shrink-0 max-h-full;
+    }
+    &__content {
+      @apply max-w-[250px];
+    }
+    &__title {
+      @apply text-base;
+    }
+    &__description {
+      @apply mt-1 text-xs text-text-subdued;
+    }
+    &:hover::before {
+      @apply opacity-100;
+    }
+    &:hover & {
+      &__title {
+        @apply text-blue;
+      }
+      &__description {
+        @apply text-text;
+      }
+    }
   }
 }

@@ -1,22 +1,36 @@
 .menu-mob {
-  @apply fixed top-[3rem] bottom-0 left-0 right-[4rem] bg-white z-100 transform transition-transform -translate-x-full
-    pt-5 px-5;
+  @apply fixed top-[3rem] bottom-0 left-0 right-14 bg-white z-100 transform transition-transform -translate-x-full
+    py-5 px-5 max-w-[320px] overflow-auto;
+  
   &.open {
     @apply translate-x-0;
   }
+  &__items {
+    @apply space-y-6;
+  }
   &__item {
     &-header {
-      @apply flex-y-center justify-between text-base;
+      @apply flex-y-center justify-between text-base cursor-pointer;
     }
   }
   &-content {
-    @apply border-l-2 border-blue-200 pl-5 space-y-5;
     &__item {
-      @apply block;
+      @apply block hover:text-blue;
+      &-pre-title {
+        @apply text-text-disabled text-sm uppercase mb-1.5;
+        letter-spacing: 0.1rem;
+      }
+    }
+    &__inner {
+      @apply pt-5 pl-5 space-y-5  relative;
+      &::before {
+        content: "";
+        @apply w-0.5 h-full block absolute left-0 top-5 bottom-0 bg-blue-200;
+      }
     }
   }
   &__actions {
-    @apply space-y-4 mt-7;
+    @apply space-y-4 mt-10;
     .btn {
       @apply w-full block flex-center h-10;
     }

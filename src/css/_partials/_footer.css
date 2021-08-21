@@ -1,7 +1,7 @@
 .footer {
   @apply pt-[3.125rem] mt-[3.125rem] lg:mt-[7.5rem] bg-black text-white text-sm;
   &__row {
-    @apply flex flex-col items-stretch space-y-5 lg:space-y-0 lg:flex-row lg:space-x-10 lg:items-start;
+    @apply flex flex-col items-stretch space-y-10 lg:space-y-0 lg:flex-row lg:space-x-10 lg:items-start;
   }
   a {
     @apply hover:underline;
@@ -16,7 +16,7 @@
       }
     }
     &__content {
-      @apply mt-5;
+      /* @apply mt-5; */
     }
     &__items {
       @apply space-y-2;

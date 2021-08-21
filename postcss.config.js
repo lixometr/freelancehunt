@@ -4,7 +4,7 @@ module.exports = {
     "postcss-import",
     tailwindcss,
     // "postcss-preset-env",
-    process.env.NODE_ENV === "production" ? "postcss-css-variables" : false,
+    // process.env.NODE_ENV === "production" ? "postcss-css-variables" : false,
     require("postcss-nested"),
     require('postcss-mixins'),
     "autoprefixer",

@@ -1,29 +1,34 @@
 <div class="menu-mob ">
     <div class="menu-mob__items">
+        {{#each menu.items}}
         <div class="menu-mob__item accordion">
             <div class="menu-mob__item-header accordion-header">
-                <span>Заказчикам</span>
+                <span>{{title}}</span>
                 {{>partials/arrow_down}}
             </div>
             <div class="menu-mob-content accordion-content">
-                <a href="#" class="menu-mob-content__item">
-                    <div class="text-base mb-1">
-                        Работайте фрилансером
-                    </div>
-                    <div class="text-xs text-text-subdued">
-                        Выбирайте среди открытых фриланс-проектов
-                    </div>
-                </a>
-                <a href="#" class="menu-mob-content__item">
-                    <div class="text-base mb-1">
-                        Работайте фрилансером
-                    </div>
-                    <div class="text-xs text-text-subdued">
-                        Выбирайте среди открытых фриланс-проектов
-                    </div>
-                </a>
+                <div class="menu-mob-content__inner">
+                    {{#each items}}
+                    <a href="#" class="menu-mob-content__item ">
+                        {{#if preTitle}}
+                        <div class="menu-mob-content__item-pre-title">
+                            {{preTitle}}
+                        </div>
+                        {{/if}}
+                        <div class="text-base mb-0.5">
+                            {{title}}
+                        </div>
+                        <div class="text-xs text-text-subdued">
+                            {{text}}
+                        </div>
+                    </a>
+                    {{/each}}
+
+                </div>
             </div>
         </div>
+        {{/each}}
+
     </div>
     <div class="menu-mob__actions">
         <a href="#" class="btn btn-blue-stroke">
@@ -34,3 +39,4 @@
         </a>
     </div>
 </div>
+<div class="menu-mob-overlay overlay"></div>

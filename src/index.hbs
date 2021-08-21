@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="freelancers-item-main__content">
                                     <div class="freelancers-item-main__name">
-                                        <a href="#">
+                                        <a href="#" class="link-no-underline">
                                             {{main.name}}
                                         </a>
                                     </div>
@@ -146,16 +146,16 @@
                             <div class="freelancers-item-rest">
                                 {{#each this.items}}
                                 <a href="#" class="freelancers-item-rest__item">
-                                    <div>
-                                        <div>
+                                    <div class="freelancers-item-rest__inner">
+                                        <div class="freelancers-item-rest__content">
                                             <img loading="lazy" src="{{this}}" alt="freelancer">
                                         </div>
                                     </div>
                                 </a>
                                 {{/each}}
                                 <a href="#" class="freelancers-item-rest__item freelancers-item-rest__more">
-                                    <div>
-                                        <div>
+                                    <div class="freelancers-item-rest__inner">
+                                        <div class="freelancers-item-rest__content">
                                             <span class="text-lg font-bold leading-5">{{more.cnt}}</span>
                                             <span class="text-xs lg:text-sm mt-1">{{more.text}}</span>
                                             <span class="mt-3">{{> partials/arrow_right }}</span>
@@ -252,10 +252,50 @@
             </div>
         </div>
     </section>
+
     <section class="projects section-offset">
         <div class="container">
             <div class="section-title">
                 <h2>Ищите работу среди <span class="text-green">3400</span> открытых фриланс-проектов</h2>
+            </div>
+            <div class="projects-tabs categories-tabs">
+                <div class="categories-tabs-categories">
+                    <div class="swiper-container ">
+                        <div class="swiper-wrapper">
+                            {{#each freelancersCategories}}
+                            <a href="#" data-index="{{@index}}"
+                                class="swiper-slide categories-tabs-categories__item {{#unless @index  }}active{{/unless}}">{{this}}</a>
+                            {{/each}}
+                        </div>
+                        <div class="categories-tabs-categories__arrow">
+                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.757971 16.7781C1.1486 17.1685 1.78168 17.1684 2.17217 16.7779L8.53598 10.4141C9.31703 9.63303 9.31703 8.3667 8.53598 7.58565L2.17217 1.22184C1.78168 0.831347 1.1486 0.831236 0.75797 1.22159C0.367126 1.61216 0.367036 2.24566 0.75777 2.63634L7.1222 8.99986L0.75777 15.3634C0.367037 15.7541 0.367126 16.3876 0.757971 16.7781Z"
+                                    fill="#232A42" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="categories-tabs-content projects-tabs__content ">
+                    {{#each projects}}
+                    <div class="categories-tabs-content-block {{#unless @index  }}active{{/unless}}"
+                        data-index="{{@index}}">
+                        <div class="projects-image">
+                            <a href="#">
+                                <img src="{{image}}" loading="lazy" alt="project-image">
+                            </a>
+                        </div>
+                        <div class="tags-block">
+                            <div class="tags-block__title   ">
+                                Топ специализации <a href="#" class="link text-blue">{{categoryName}}</a>
+                            </div>
+                            {{> partials/tags items=this.tags more="Всего активно 37" }}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </section>

@@ -49,9 +49,25 @@ h3 {
     }
   }
 }
-
-
-
+.menu-trigger {
+  .close {
+    @apply hidden;
+  }
+  &.open {
+    .trigger {
+      @apply hidden;
+    }
+    .close {
+      @apply block;
+    }
+  }
+}
+.overlay {
+  @apply fixed inset-0 bg-black  z-[99] invisible opacity-0 transition-all;
+  &.open {
+    @apply visible opacity-60;
+  }
+}
 @define-mixin bg $url, $url2x {
   background-image: url($url);
   @media all and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -60,4 +76,3 @@ h3 {
     }
   }
 }
-

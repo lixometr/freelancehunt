@@ -1,3 +1,21 @@
 .menu-auth {
-  @apply fixed z-100;
+  @apply fixed top-[3rem] bottom-0 left-auto right-0 bg-white z-100 transform transition-transform translate-x-full
+    pt-5 px-5 max-w-[320px] overflow-auto
+    flex flex-col justify-center;
+
+  &.open {
+    @apply translate-x-0;
+  }
+  &__title {
+    @apply text-2xl font-bold mb-2 text-black;
+  }
+  &__content {
+    @apply text-sm text-text-subdued;
+  }
+  &__actions {
+    @apply space-y-4 mt-10;
+    .btn {
+      @apply w-full block flex-center h-10;
+    }
+  }
 }

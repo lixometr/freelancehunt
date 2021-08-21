@@ -1,8 +1,8 @@
 .accordion {
-  &-content {
-    @apply transition-all duration-300;
+  & &-content {
+    @apply hidden transition-all duration-300 !important;
   }
-  &-header {
+  & &-header {
     svg {
       @apply transition-all transform;
     }
@@ -12,6 +12,11 @@
       svg {
         @apply rotate-180;
       }
+    }
+  }
+  &.opened & {
+    &-content {
+      @apply block !important;
     }
   }
 }

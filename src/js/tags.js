@@ -3,9 +3,11 @@ export class Tags {
     this.el = typeof el === "string" ? document.querySelector(el) : el;
     this.tags = this.el.querySelectorAll(".tags-item");
     this.moreBtn = this.el.querySelector(".tags-more");
-    this.moreTextEl = this.moreBtn.querySelector("span");
-    this.moreText = this.moreTextEl.innerHTML;
-    this.lessText = this.moreBtn.getAttribute("data-less");
+    if (this.moreBtn) {
+      this.moreTextEl = this.moreBtn.querySelector("span");
+      this.lessText = this.moreBtn.getAttribute("data-less");
+      this.moreText = this.moreTextEl.innerHTML;
+    }
     this.isOpen = false;
     this.init();
   }
@@ -28,9 +30,11 @@ export class Tags {
     }
   }
   init() {
-    this.moreBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      this.toggle();
-    });
+    if (this.moreBtn) {
+      this.moreBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.toggle();
+      });
+    }
   }
 }

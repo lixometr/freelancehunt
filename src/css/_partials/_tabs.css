@@ -9,7 +9,7 @@
     .swiper-container {
       &::before {
         content: "";
-        @apply lg:hidden block absolute right-0 w-16 h-full  z-10;
+        @apply lg:hidden block absolute right-0 w-16 h-full z-10 pointer-events-none;
         background-image: linear-gradient(
           to right,
           transparent 0%,
