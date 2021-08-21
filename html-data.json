@@ -536,7 +536,8 @@
                     {
                         "title": "Открыть конкурс",
                         "description": "разместите задание и получите готовые варианты решения",
-                        "icon": "/img/icons/trophy.svg"
+                        "icon": "/img/icons/trophy.svg",
+                        "tooltip": "только Дизайн и Текста"
                     }
                 ]
             },

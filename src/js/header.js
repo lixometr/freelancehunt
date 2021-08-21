@@ -26,21 +26,26 @@ onReady(() => {
     ),
   ];
   let menuOpen = false;
+  let scrollMore = false;
   menus.forEach((menu) => {
     menu.on("open", () => {
       header.classList.add("fix");
       menuOpen = true;
     });
     menu.on("close", () => {
-      header.classList.remove("fix");
       menuOpen = false;
+
+      if (scrollMore) return;
+      header.classList.remove("fix");
     });
   });
   const checkScroll = () => {
     const scrollTop = window.scrollY;
     if (scrollTop > 20) {
       header.classList.add("fix");
+      scrollMore = true;
     } else {
+      scrollMore = false;
       if (menuOpen) return;
       header.classList.remove("fix");
     }

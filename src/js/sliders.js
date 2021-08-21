@@ -4,10 +4,14 @@ SwiperCore.use([Navigation, Pagination]);
 import breakpoints from "./breakpoints";
 
 new Swiper(".clients-slider", {
-  slidesPerView: 4,
+  slidesPerView: 'auto',
   spaceBetween: 27,
   breakpoints: {
-    [breakpoints.lg]: {
+    [breakpoints.sm]: {
+      slidesPerView: 'auto',
+      spaceBetween: 77
+    },
+    [breakpoints.md]: {
       slidesPerView: 6,
       spaceBetween: 77,
     },

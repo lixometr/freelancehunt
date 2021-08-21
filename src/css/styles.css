@@ -53,10 +53,10 @@
     }
 
     &__slider {
-      @apply flex-1;
+      @apply flex-1 min-w-0 w-full lg:w-auto;
     }
     &__slide {
-      @apply h-6 !important;
+      @apply h-4.5 xs:h-6 sm:h-7 lg:h-[1.70rem] w-auto !important;
       img {
         @apply h-full;
       }

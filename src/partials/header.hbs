@@ -45,6 +45,9 @@
                         <div class="header-menu-item__content">
                             <div class="header-menu-item__title">{{title}}</div>
                             <div class="header-menu-item__description">{{description}}</div>
+                            {{#if tooltip}}
+                                <div class="text-xs text-text-disabled mt-0.5"><span class="transform translate-y-1 inline-block mr-1">*</span>{{tooltip}}</div>
+                            {{/if}}
                         </div>
                     </a>
                 </div>
