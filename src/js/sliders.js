@@ -7,11 +7,11 @@ new Swiper(".clients-slider", {
   slidesPerView: 'auto',
   spaceBetween: 27,
   breakpoints: {
+    // [breakpoints.sm]: {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 77
+    // },
     [breakpoints.sm]: {
-      slidesPerView: 'auto',
-      spaceBetween: 77
-    },
-    [breakpoints.md]: {
       slidesPerView: 6,
       spaceBetween: 77,
     },

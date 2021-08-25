@@ -243,9 +243,9 @@
 .projects {
   @apply overflow-hidden;
   &-image {
-    @apply mb-8 lg:mb-[3.125rem] pb-[45%] relative;
+    @apply mb-8 lg:mb-[3.125rem] pb-[45%] relative ;
     img {
-      @apply absolute inset-0 h-full w-full object-cover rounded-xl filter hover:brightness-75 transition-all;
+      @apply absolute inset-0 h-full w-full object-cover rounded-xl filter hover:brightness-75 transition-all transform lg:hover:scale-110;
     }
   }
 }
