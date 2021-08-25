@@ -1,5 +1,5 @@
 .header {
-  @apply py-2.5 lg:h-20 lg:py-5 bg-bg-200 lg:bg-transparent border-b border-blue-200 lg:border-none fixed top-0 left-0 right-0 z-200 transition-all;
+  @apply py-2.5  lg:h-20 lg:py-0 bg-bg-200 lg:bg-transparent border-b border-blue-200 lg:border-none fixed top-0 left-0 right-0 z-200 transition-all;
   &__row {
     @apply flex-y-center justify-between h-full;
   }
@@ -10,7 +10,7 @@
     @apply space-x-5 hidden lg:flex items-center;
   }
   &__menu-wrapper {
-    @apply hidden lg:block;
+    @apply hidden lg:flex self-stretch items-center;
   }
   &__menu {
     @apply space-x-10 flex-y-center;
@@ -32,13 +32,21 @@
   }
 }
 
-.header-menu {
+.header-menus {
   @apply invisible opacity-0 fixed top-20 left-0 right-0 min-h-[300px] bg-white z-100 shadow-main py-5
-    border-t border-blue-200 transition-all transform -translate-y-4;
+  border-t border-blue-200 transition-all transform -translate-y-4;
   &.open {
-    @apply lg:visible opacity-100 translate-y-0;
+    @apply lg:visible;
   }
-
+  &.opened {
+    @apply opacity-100 translate-y-0;
+  }
+}
+.header-menu {
+  @apply hidden;
+  &.open {
+    @apply block;
+  }
   &__row {
     @apply flex items-start max-h-full;
   }
@@ -49,7 +57,7 @@
       @apply w-full flex justify-between mb-4 pt-2;
     }
     &-tooltip {
-      @apply  flex-1 font-bold text-text-disabled uppercase text-xs pl-[3.75rem] leading-none;
+      @apply flex-1 font-bold text-text-disabled uppercase text-xs pl-[3.75rem] leading-none;
       letter-spacing: 0.1rem;
       > span {
         @apply relative pl-4;
@@ -76,7 +84,7 @@
       content: "";
       @apply absolute right-4 top-1/2 transform -translate-y-1/2 bg-contain bg-center bg-no-repeat
         w-3.5 h-2.5 opacity-0 pointer-events-none transition-all;
-      background-image: url(/img/icons/arrow_right.svg);
+      background-image: url(../img/icons/arrow_right.svg);
     }
     &__image {
       @apply w-8 mr-4 flex-shrink-0 max-h-full;

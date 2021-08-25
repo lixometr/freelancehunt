@@ -32,7 +32,7 @@
       lg:text-2xl lg:w-full lg:pl-5 lg:pb-0 !important;
       &::before {
         content: "";
-        @apply w-full h-0.5 bg-blue block absolute left-0 right-0 top-auto bottom-0 flex-shrink-0 opacity-0 
+        @apply w-full h-0.5 rounded-full bg-blue block absolute left-0 right-0 top-auto bottom-0 flex-shrink-0 opacity-0 
         lg:mr-5 lg:right-auto lg:top-0 lg:h-full lg:w-1;
       }
       &.active {
@@ -44,9 +44,9 @@
     }
   }
   &-content {
-    @apply flex-1;
+    @apply flex-1 flex overflow-hidden -mr-7;
     &-block {
-      @apply hidden;
+      @apply hidden w-full flex-none pr-7;
       &.active {
         @apply block;
       }

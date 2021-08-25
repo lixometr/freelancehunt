@@ -1,11 +1,11 @@
 {
     "partners": [
-        "/img/clients/mastercard.svg",
-        "/img/clients/privatbank.svg",
-        "/img/clients/villa.svg",
-        "/img/clients/lun.svg",
-        "/img/clients/brain.svg",
-        "/img/clients/autoria.svg"
+        "img/clients/mastercard.svg",
+        "img/clients/privatbank.svg",
+        "img/clients/villa.svg",
+        "img/clients/lun.svg",
+        "img/clients/brain.svg",
+        "img/clients/autoria.svg"
     ],
     "numbers": [
         {
@@ -13,7 +13,7 @@
             "title": "заказчиков",
             "value": "9,6 из 10",
             "valueTitle": "средняя оценка заказчиков",
-            "img": "/img/charts/1.svg",
+            "img": "img/charts/1.svg",
             "stat": "494 активно"
         },
         {
@@ -21,7 +21,7 @@
             "title": "фрилансеров",
             "value": "9,8 из 10",
             "valueTitle": "средняя оценка работы",
-            "img": "/img/charts/2.svg",
+            "img": "img/charts/2.svg",
             "stat": "2 054 активно"
         },
         {
@@ -29,7 +29,7 @@
             "title": "вакансий",
             "value": "62",
             "valueTitle": "среднее количество откликов",
-            "img": "/img/charts/3.svg",
+            "img": "img/charts/3.svg",
             "stat": "902 за неделю"
         },
         {
@@ -37,7 +37,7 @@
             "title": "проектов",
             "value": "97%",
             "valueTitle": "успешных проектов",
-            "img": "/img/charts/4.svg",
+            "img": "img/charts/4.svg",
             "stat": "1 780 за неделю"
         }
     ],
@@ -62,16 +62,16 @@
                 "text": "программиста"
             },
             "main": {
-                "image": "/img/freelancers/main.png",
+                "image": "img/freelancers/main.png",
                 "name": "Артем Полищук",
                 "category": "Веб-программирование",
                 "rate": "9,2",
                 "reviews": "718 отзывов"
             },
             "items": [
-                "/img/freelancers/1.png",
-                "/img/freelancers/2.png",
-                "/img/freelancers/3.png"
+                "img/freelancers/1.png",
+                "img/freelancers/2.png",
+                "img/freelancers/3.png"
             ],
             "tags": [
                 {
@@ -153,16 +153,16 @@
                 "text": "дизайнера"
             },
             "main": {
-                "image": "/img/freelancers/main.png",
+                "image": "img/freelancers/main.png",
                 "name": "Артем Полищук",
                 "category": "Веб-программирование",
                 "rate": "9,2",
                 "reviews": "999 отзывов"
             },
             "items": [
-                "/img/freelancers/3.png",
-                "/img/freelancers/2.png",
-                "/img/freelancers/1.png"
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
             ],
             "tags": [
                 {
@@ -186,7 +186,7 @@
     ],
     "projects": [
         {
-            "image": "/img/service_1.png",
+            "image": "img/service_1.png",
             "tags": [
                 {
                     "name": "Баннеры",
@@ -247,7 +247,7 @@
             ]
         },
         {
-            "image": "/img/service_1.png",
+            "image": "img/service_1.png",
             "tags": [
                 {
                     "name": "php",
@@ -510,66 +510,66 @@
     "header": {
         "menu": {
             "orders": {
-                "image": "/img/chair_man.png",
-                "image2x": "/img/chair_man@2x.png",
+                "image": "img/chair_man.png",
+                "image2x": "img/chair_man@2x.png",
                 "items": [
                     {
                         "title": "Создайте фриланс-проект",
                         "description": "получите лучшие предложения по цене и срокам от фрилансеров",
-                        "icon": "/img/icons/laptop.svg"
+                        "icon": "img/icons/laptop.svg"
                     },
                     {
                         "title": "Разместить вакансию",
                         "description": "найдите сотрудника на постоянную работу удаленно или в офисе",
-                        "icon": "/img/icons/bag.svg"
+                        "icon": "img/icons/bag.svg"
                     },
                     {
                         "title": "Найти фрилансера",
                         "description": "выберите лучшего специалиста по отзывам, рейтингу и портфолио",
-                        "icon": "/img/icons/scale_glass.svg"
+                        "icon": "img/icons/scale_glass.svg"
                     },
                     {
                         "title": "Бизнес Сейф для компаний",
                         "description": "работайте по безналичному расчету и получайте закрывающие документы",
-                        "icon": "/img/icons/woman_office.svg"
+                        "icon": "img/icons/woman_office.svg"
                     },
                     {
                         "title": "Открыть конкурс",
                         "description": "разместите задание и получите готовые варианты решения",
-                        "icon": "/img/icons/trophy.svg",
+                        "icon": "img/icons/trophy.svg",
                         "tooltip": "только Дизайн и Текста"
                     }
                 ]
             },
             "freelancers": {
-                "image": "/img/notebook_man.png",
-                "image2x": "/img/notebook_man@2x.png",
+                "image": "img/notebook_man.png",
+                "image2x": "img/notebook_man@2x.png",
                 "items": [
                     {
                         "title": "Работайте фрилансером",
                         "description": "Выбирайте среди открытых фриланс-проектов",
-                        "icon": "/img/icons/man_notebook.svg"
+                        "icon": "img/icons/man_notebook.svg"
                     },
                     {
                         "title": "Разместить резюме",
                         "description": "и найдите постоянную работу удаленно или в офисе",
-                        "icon": "/img/icons/note.svg"
+                        "icon": "img/icons/note.svg"
                     }
                 ]
             },
             "vacancies": {
-                "image": "/img/office_worker.png",
-                "image2x": "/img/office_worker@2x.png",
+                "image": "img/office_worker.png",
+                "image2x": "img/office_worker@2x.png",
                 "items": [
                     {
                         "title": "Разместить резюме",
                         "description": "и найдите постоянную работу удаленно или в офисе",
-                        "icon": "/img/icons/note.svg"
+                        "icon": "img/icons/note.svg"
                     },
                     {
                         "title": "Разместить вакансию",
                         "description": "найдите сотрудника на постоянную работу удаленно или в офисе",
-                        "icon": "/img/icons/bag.svg"
+                        "icon": "img/icons/bag.svg"
                     }
                 ]
             }

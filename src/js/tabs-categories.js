@@ -15,6 +15,7 @@ export class TabsCategories {
       ...this.contentBlock.querySelectorAll(".categories-tabs-content-block"),
     ];
     this.activeIdx = 0;
+    this.isAnimating = false;
     this.init();
   }
   getActiveContent() {
@@ -22,7 +23,8 @@ export class TabsCategories {
       (block) => block.getAttribute("data-index") === String(this.activeIdx)
     );
   }
-   selectItem(index) {
+  selectItem(index) {
+    if (this.isAnimating) return;
     const prevIdx = this.activeIdx;
     if (index === prevIdx) return;
     this.activeIdx = index;
@@ -48,31 +50,54 @@ export class TabsCategories {
     );
     const newBlock = this.getActiveContent();
     if (!newBlock) return;
+    const dir = prevIdx > this.activeIdx ? "right" : "left";
+    const promises = [];
+    this.isAnimating = true;
     if (prevBlock) {
-      await this.hideBlock(prevBlock);
+      const hidePromise = this.hideBlock(prevBlock, dir);
+      if (!this.isMob) {
+        await hidePromise;
+      }
+      promises.push(hidePromise);
     }
     if (newBlock) {
-      this.showBlock(newBlock);
+      const showPromise = this.showBlock(newBlock, dir);
+      promises.push(showPromise);
     }
+    if (this.isMob) {
+      await Promise.all(promises);
+    }
+    this.isAnimating = false;
   }
-  hideBlock(block) {
+  hideBlock(block, dir) {
+    const animations = {
+      left: "t-slideLeftLeave",
+      right: "t-slideRightLeave",
+    };
+    const animation = animations[dir];
     return new Promise((resolve) => {
-      block.classList.add("t-fadeOut");
+      block.classList.add(animation);
       const listener = () => {
         block.classList.remove("active");
-        block.classList.remove("t-fadeOut");
+        block.classList.remove(animation);
         block.removeEventListener("animationend", listener);
         resolve();
       };
       block.addEventListener("animationend", listener);
     });
   }
-  showBlock(block) {
+  showBlock(block, dir) {
+    const animations = {
+      left: "t-slideLeftEnter",
+      right: "t-slideRightEnter",
+    };
+    const animation = animations[dir];
+
     return new Promise((resolve) => {
       block.classList.add("active");
-      block.classList.add("t-fadeIn");
+      block.classList.add(animation);
       const listener = () => {
-        block.classList.remove("t-fadeIn");
+        block.classList.remove(animation);
         block.removeEventListener("animationend", listener);
         resolve();
       };
@@ -101,7 +126,7 @@ export class TabsCategories {
       this.categoriesSlider.on("snapIndexChange", (e) => {
         const total = e.slides.length - 2;
         const active = e.snapIndex;
-        
+
         if (total <= active) {
           swiperContainer.classList.add("last");
         } else {
@@ -117,6 +142,10 @@ export class TabsCategories {
       this.categorySliderInited = false;
     }
   }
+  checkMob() {
+    const isMob = bpLess("lg");
+    this.isMob = isMob;
+  }
   init() {
     // this.initTags();
     this.categories.forEach((item) => {
@@ -128,8 +157,10 @@ export class TabsCategories {
       });
     });
     window.addEventListener("resize", () => {
+      this.checkMob();
       this.checkSlider();
     });
+    this.checkMob();
     this.checkSlider();
   }
 }

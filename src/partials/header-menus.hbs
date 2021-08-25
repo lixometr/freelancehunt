@@ -1,0 +1,93 @@
+<div class="header-menus">
+    {{#with header.menu.orders}}
+    <div class="header-menu header-menu-orders">
+        <div class="container">
+            <div class="header-menu__row">
+                <div class="header-menu__items">
+                    {{#each items}}
+                    <div class="header-menu-item-col">
+                        <a href="#" class="header-menu-item">
+                            <div class="header-menu-item__image">
+                                <img src="{{icon}}" alt="icon">
+                            </div>
+                            <div class="header-menu-item__content">
+                                <div class="header-menu-item__title">{{title}}</div>
+                                <div class="header-menu-item__description">{{description}}</div>
+                                {{#if tooltip}}
+                                <div class="text-xs text-text-disabled mt-0.5"><span
+                                        class="transform translate-y-1 inline-block mr-1">*</span>{{tooltip}}</div>
+                                {{/if}}
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+
+                </div>
+                <div class="header-menu__image">
+                    <img src="{{image}}" srcset="img/chair_man@2x.png 2x" alt="image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    {{#with header.menu.freelancers}}
+    <div class="header-menu header-menu-freelancers">
+        <div class="container">
+            <div class="header-menu__row">
+                <div class="header-menu__items">
+                    {{#each items}}
+                    <div class="header-menu-item-col">
+                        <a href="#" class="header-menu-item">
+                            <div class="header-menu-item__image">
+                                <img src="{{icon}}" alt="icon">
+                            </div>
+                            <div class="header-menu-item__content">
+                                <div class="header-menu-item__title">{{title}}</div>
+                                <div class="header-menu-item__description">{{description}}</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+
+                </div>
+                <div class="header-menu__image">
+                    <img src="{{image}}" srcset="{{image2x}} 2x" alt="image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    {{#with header.menu.vacancies}}
+    <div class="header-menu header-menu-vacancies">
+        <div class="container">
+            <div class="header-menu__row">
+                <div class="header-menu__items">
+                    <div class="header-menu__items-top">
+                        <div class="header-menu__items-tooltip">
+                            <span>Соискателю</span>
+                        </div>
+                        <div class="header-menu__items-tooltip"><span>Работодателю</span></div>
+                    </div>
+                    {{#each items}}
+                    <div class="header-menu-item-col">
+                        <a href="#" class="header-menu-item">
+                            <div class="header-menu-item__image">
+                                <img src="{{icon}}" alt="icon">
+                            </div>
+                            <div class="header-menu-item__content">
+                                <div class="header-menu-item__title">{{title}}</div>
+                                <div class="header-menu-item__description">{{description}}</div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+
+                </div>
+                <div class="header-menu__image">
+                    <img src="{{image}}" srcset="{{image2x}} 2x" alt="image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+</div>

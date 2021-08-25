@@ -1,10 +1,16 @@
 .menu-auth {
   @apply fixed top-[3rem] bottom-0 left-auto right-0 bg-white z-100 transform transition-transform translate-x-full
     pt-5 px-5 max-w-[320px] overflow-auto
-    flex flex-col justify-center;
+    flex flex-col justify-center invisible;
 
   &.open {
+    @apply visible;
+  }
+  &.opened {
     @apply translate-x-0;
+  }
+  &__wrapper {
+    @apply transform -translate-y-8;
   }
   &__title {
     @apply text-2xl font-bold mb-2 text-black;

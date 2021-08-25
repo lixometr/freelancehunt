@@ -14,16 +14,27 @@ export class Menu {
     this.init();
   }
   open() {
-    menus.forEach((m) => m.close());
+    menus.forEach((m) => {
+      if (m !== this) {
+        m.close();
+      }
+    });
     this.isOpen = true;
     this.el.classList.add("open");
+    this.el.classList.add("opened");
     this.trigger.classList.add("open");
     this.overlay.classList.add("open");
     this.emit("open");
   }
   close() {
+    if (!this.isOpen) return;
     this.isOpen = false;
-    this.el.classList.remove("open");
+    this.el.classList.remove("opened");
+    const listener = () => {
+      this.el.classList.remove("open");
+      this.el.removeEventListener("transitionend", listener);
+    };
+    this.el.addEventListener("transitionend", listener);
     this.trigger.classList.remove("open");
     this.overlay.classList.remove("open");
     this.emit("close");

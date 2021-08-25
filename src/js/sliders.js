@@ -4,14 +4,21 @@ SwiperCore.use([Navigation, Pagination]);
 import breakpoints from "./breakpoints";
 
 new Swiper(".clients-slider", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 27,
   breakpoints: {
     // [breakpoints.sm]: {
     //   slidesPerView: 'auto',
     //   spaceBetween: 77
     // },
+
     [breakpoints.sm]: {
+      slidesPerView: 6,
+      spaceBetween: 77,
+      resistanceRatio: 0.85,
+    },
+    [breakpoints.lg]: {
+      resistanceRatio: 0,
       slidesPerView: 6,
       spaceBetween: 77,
     },
@@ -30,6 +37,7 @@ new Swiper(".for-orders-slider", {
   slidesOffsetBefore: 20,
   breakpoints: {
     [breakpoints.lg]: {
+      resistanceRatio: 0,
       slidesPerView: 2,
       spaceBetween: 24,
       slidesOffsetAfter: 0,
@@ -48,6 +56,7 @@ new Swiper(".numbers-slider", {
   slidesOffsetBefore: 20,
   breakpoints: {
     [breakpoints.lg]: {
+      resistanceRatio: 0,
       slidesPerView: 4,
       spaceBetween: 24,
       slidesOffsetAfter: 0,

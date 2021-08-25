@@ -216,29 +216,31 @@
                 удобный и безопасный способ — поиск исполнителя через специализированные сервисы онлайн.
             </div>
             <div class="info-table-wrapper">
-                <table class="info-table">
-                    <thead>
-                        <tr>
-                            {{#each info.table.head}}
-                            <th>
-                                {{this}}
-                            </th>
-                            {{/each}}
+                <div class="info-table-wrapper__inner">
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                {{#each info.table.head}}
+                                <th>
+                                    {{this}}
+                                </th>
+                                {{/each}}
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each info.table.rows}}
-                        <tr>
-                            {{#each this}}
-                            <td>
-                                {{this}}
-                            </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each info.table.rows}}
+                            <tr>
+                                {{#each this}}
+                                <td>
+                                    {{this}}
+                                </td>
+                                {{/each}}
+                            </tr>
                             {{/each}}
-                        </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="text-sm">
                 <div class="mb-5">

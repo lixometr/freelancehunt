@@ -43,12 +43,20 @@ onReady(() => {
   })();
   (function () {
     new Menu(".menu-mob", ".menu-mob-overlay", ".burger");
+    const accordions = [];
     document.querySelectorAll(".menu-mob__item").forEach((item) => {
-      new Accordion(item, false);
+      const acc = new Accordion(item, false);
+      accordions.push(acc);
+      acc.on("open", () => {
+        accordions.forEach((accordion) => {
+          if (accordion !== acc) {
+            accordion.close();
+          }
+        });
+      });
     });
   })();
   (function () {
     new Menu(".menu-auth", ".menu-auth-overlay", ".header-account");
-   
   })();
 });

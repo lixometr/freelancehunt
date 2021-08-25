@@ -10,8 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Freelancehunt</title>
+    <style>
+        .header-menus {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,14 +26,17 @@
             <div class="hero__bg-1"></div>
             <div class="hero__bg-2"></div>
             <div class="hero__content">
-                <h1 class="mb-2.5 lg:mb-12">Лучшие фрилансеры для выполнения ваших задач</h1>
-                <h3 class="hero__description">Работайте без рисков на сервисе фриланса №1 в Украине</h3>
+                <h1 class="mb-2.5 lg:mb-12">
+                    <span class="hidden lg:inline-block">Лучшие фрилансеры для выполнения ваших задач</span>
+                    <span class="lg:hidden">Лучшие фрилансеры для ваших задач</span>
+                </h1>
+                <h3 class="hero__description">Работайте без рисков на сервисе <br> фриланса №1 в Украине</h3>
                 <div class="hero__actions">
                     <a href="#" class="hero__btn btn btn-lg btn-green">Разместить проект</a>
                     <a href="#" class="p1 link-underline font-bold">Стать фрилансером</a>
                 </div>
             </div>
-            <img class="hero__image" src="/img/hero.png" srcset="/img/hero@2x.png 2x" alt="">
+            <img class="hero__image" src="img/hero.png" srcset="img/hero@2x.png 2x" alt="">
         </div>
         <div class="container">
             <div class="hero-clients">
@@ -63,7 +71,7 @@
                             <a href="#" class="for-orders-item__btn btn btn-green">Разместить проект</a>
                         </div>
                         <div class="for-orders-item__image">
-                            <img src="/img/clock_man.png" loading="lazy" srcset="/img/clock_man@2x.png"
+                            <img src="img/clock_man.png" loading="lazy" srcset="img/clock_man@2x.png 2x"
                                 alt="main-clock">
                         </div>
                     </div>
@@ -79,7 +87,7 @@
                             <a href="#" class="for-orders-item__btn btn btn-green-stroke">Открыть конкурс</a>
                         </div>
                         <div class="for-orders-item__image">
-                            <img src="/img/bulb_man.png" loading="lazy" srcset="/img/bulb_man@2x.png" alt="main-clock">
+                            <img src="img/bulb_man.png" loading="lazy" srcset="img/bulb_man@2x.png 2x" alt="main-clock">
                         </div>
                     </div>
                 </div>
@@ -134,7 +142,7 @@
                                     <div class="freelancers-item-main__category">{{main.category}}</div>
                                     <div class="freelancers-item-main__stat">
                                         <div class="freelancers-item-main__rate">
-                                            <img loading="lazy" src="/img/icons/star.svg" alt="star">
+                                            <img loading="lazy" src="img/icons/star.svg" alt="star">
                                             {{main.rate}} из 10
                                         </div>
                                         <div class="freelancers-item-main__reviews">
@@ -145,23 +153,23 @@
                             </div>
                             <div class="freelancers-item-rest">
                                 {{#each this.items}}
-                                <a href="#" class="freelancers-item-rest__item">
-                                    <div class="freelancers-item-rest__inner">
+                                <div class="freelancers-item-rest__item">
+                                    <a href="#" class="freelancers-item-rest__inner">
                                         <div class="freelancers-item-rest__content">
                                             <img loading="lazy" src="{{this}}" alt="freelancer">
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                                 {{/each}}
-                                <a href="#" class="freelancers-item-rest__item freelancers-item-rest__more">
-                                    <div class="freelancers-item-rest__inner">
+                                <div class="freelancers-item-rest__item freelancers-item-rest__more">
+                                    <a href="#" class="freelancers-item-rest__inner">
                                         <div class="freelancers-item-rest__content">
                                             <span class="text-lg font-bold leading-5">{{more.cnt}}</span>
                                             <span class="text-xs lg:text-sm mt-1">{{more.text}}</span>
                                             <span class="mt-3">{{> partials/arrow_right }}</span>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="tags-block">
@@ -229,7 +237,7 @@
             </div>
             <div class="for-freelancers__row">
                 <div class="for-freelancers__image">
-                    <img loading="lazy" src="/img/rocket_man.png" srcset="/img/rocket_man@2x.png" alt="rocket-man">
+                    <img loading="lazy" src="img/rocket_man.png" srcset="img/rocket_man@2x.png 2x" alt="rocket-man">
                 </div>
                 <div class="for-freelancers__content">
                     <ul class="for-freelancers__list">
@@ -246,7 +254,7 @@
                     </div>
                     <div class="for-freelancers__tooltip">После регистрации все исполнители проходят обязательную
                         проверку профиля. После этого
-                        работа бесплатна — вам не обязательно покупать <img src="/img/icons/pro.svg" alt="pro"
+                        работа бесплатна — вам не обязательно покупать <img src="img/icons/pro.svg" alt="pro"
                             class="inline-block mx-1"> аккаунт.</div>
                 </div>
             </div>
@@ -310,7 +318,7 @@
             </div>
             <div class="vacancies__row">
                 <div class="vacancies__image">
-                    <img loading="lazy" src="/img/vacancy.png" srcset="/img/vacancy@2x.png" alt="rocket-man">
+                    <img loading="lazy" src="img/vacancy.png" srcset="img/vacancy@2x.png 2x" alt="rocket-man">
                 </div>
                 <div class="vacancies__content">
                     <div class="vacancies__text">
@@ -335,7 +343,7 @@
     {{> partials/footer}}
     {{> partials/menu-auth}}
     {{> partials/menu-mob}}
-    <script src="/js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

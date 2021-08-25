@@ -150,7 +150,7 @@
         @apply pb-[100%] lg:pb-0 relative;
 
         img {
-          @apply h-full lg:h-[225px] w-full object-cover absolute inset-0 lg:relative filter hover:brightness-75 transition-all;
+          @apply h-full lg:h-[225px] w-full object-cover absolute inset-0 lg:relative filter hover:brightness-75 transition-all  rounded-tr-xl rounded-tl-xl;
         }
       }
       &__category {
@@ -179,7 +179,7 @@
         }
       }
       &__inner {
-        @apply relative pb-[100%];
+        @apply relative pb-[100%] block;
       }
       &__content {
         @apply absolute inset-0;
@@ -218,11 +218,11 @@
   &__list {
     @apply lg:h3 !font-medium text-sm space-y-3  lg:text-2xl lg:space-y-6;
     li {
-      @apply flex items-start max-w-[420px];
+      @apply flex items-start max-w-[460px];
       &::before {
         content: "";
         @apply w-[20px] mr-2.5 h-[20px] translate-y-0 lg:w-[25px] lg:h-[25px] lg:mr-5 lg:translate-y-0.5 bg-center bg-contain  flex-shrink-0 transform;
-        background-image: url(/img/icons/checkbox_blue.svg);
+        background-image: url(../img/icons/checkbox_blue.svg);
       }
     }
   }
@@ -243,9 +243,9 @@
 .projects {
   @apply overflow-hidden;
   &-image {
-    @apply mb-8 lg:mb-[3.125rem] pb-[45%] relative ;
+    @apply mb-8 lg:mb-[3.125rem] pb-[45%] relative overflow-hidden rounded-xl;
     img {
-      @apply absolute inset-0 h-full w-full object-cover rounded-xl filter hover:brightness-75 transition-all transform lg:hover:scale-110;
+      @apply absolute inset-0 h-full w-full object-cover rounded-xl transition-all duration-300  transform hover:scale-[1.2];
     }
   }
 }
@@ -330,9 +330,12 @@
   }
   &-table-wrapper {
     @apply overflow-auto pb-5 mb-5 lg:mb-0 -mr-5;
+    &__inner {
+      @apply pr-5 lg:pr-0 w-[900px] md:w-[1120px];
+    }
   }
   &-table {
-    @apply rounded-lg border border-black text-sm p-0 text-left w-[1120px];
+    @apply rounded-lg border border-black text-sm p-0 text-left w-full;
     border-collapse: separate;
     border-spacing: 0;
     th {

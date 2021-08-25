@@ -4,6 +4,62 @@
 .t-fadeOut {
   animation: fadeOut 0.3s ease-in-out;
 }
+.t-slideLeftEnter {
+  animation: slideLeftEnter 0.3s ease-in-out;
+  @screen lg {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+.t-slideLeftLeave {
+  animation: slideLeftLeave 0.3s ease-in-out;
+  @screen lg {
+    animation: fadeOut 0.3s ease-in-out;
+  }
+}
+.t-slideRightEnter {
+  animation: slideRightEnter 0.3s ease-in-out;
+  @screen lg {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+.t-slideRightLeave {
+  animation: slideRightLeave 0.3s ease-in-out;
+  @screen lg {
+    animation: fadeOut 0.3s ease-in-out;
+  }
+}
+@keyframes slideLeftEnter {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideLeftLeave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideRightEnter {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRightLeave {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -19,6 +75,6 @@
   }
   to {
     opacity: 0;
-    transform: translateX(100px)
+    transform: translateX(100px);
   }
 }
