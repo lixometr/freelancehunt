@@ -11,7 +11,7 @@ onReady(() => {
     let accordions = [];
     let isInited = false;
     const checkResize = () => {
-      if (bpLess("lg")) {
+      if (bpLess("sm")) {
         if (isInited) return;
         document.querySelectorAll(".footer-col").forEach((item) => {
           item.classList.add("accordion");

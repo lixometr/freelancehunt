@@ -50,7 +50,6 @@ class HeaderMenu {
   _closeHandler() {
     this.close();
     this.removeCloseEvent();
-    console.log("menu leave");
   }
   removeCloseEvent() {
     this.headerMenu.removeEventListener("mouseleave", this.closeHandler);
@@ -69,8 +68,10 @@ class HeaderMenu {
   }
   init() {
     this.triggers.forEach((trigger, idx) => {
+      trigger.addEventListener('click', e => {
+        e.preventDefault()
+      })
       trigger.addEventListener("mouseenter", () => {
-        console.log("item hover");
         this.updateIndex(idx);
         if (!this.isOpen) {
           this.open();

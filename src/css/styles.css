@@ -84,7 +84,7 @@
       @apply p2;
     }
     &__btn {
-      @apply mt-auto;
+      @apply mt-auto w-full xs:w-auto;
     }
 
     &__image {
@@ -331,7 +331,7 @@
   &-table-wrapper {
     @apply overflow-auto pb-5 mb-5 lg:mb-0 -mr-5;
     &__inner {
-      @apply pr-5 lg:pr-0 w-[900px] md:w-[1120px];
+      @apply pr-5 w-[900px] md:w-full;
     }
   }
   &-table {
@@ -344,6 +344,9 @@
     th,
     td {
       @apply py-4 px-5 border-b border-black border-r last:border-r-0;
+    }
+    td {
+      @apply py-2.5;
     }
 
     tr {

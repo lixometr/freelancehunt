@@ -30,13 +30,12 @@ export class TabsCategories {
     this.activeIdx = index;
     this.updateContent(prevIdx);
     this.updateCategories();
+    this.updateSlider()
   }
-  // initTags() {
-  //   this.contents.forEach((block) => {
-  //     const tags = block.querySelector(".tags");
-  //     new Tags(tags);
-  //   });
-  // }
+  updateSlider() {
+    if(!this.categoriesSlider) return
+    this.categoriesSlider.slideTo(this.activeIdx)
+  }
   updateCategories() {
     this.categories.forEach((cat) => cat.classList.remove("active"));
     const newCategory = this.categories.find(
