@@ -221,7 +221,7 @@
       @apply flex items-start max-w-[460px];
       &::before {
         content: "";
-        @apply w-[20px] mr-2.5 h-[20px] translate-y-0 lg:w-[25px] lg:h-[25px] lg:mr-5 lg:translate-y-0.5 bg-center bg-contain  flex-shrink-0 transform;
+        @apply w-[20px] mr-2.5 h-[20px] translate-y-0 lg:w-[26px] lg:h-[26px] lg:mr-5 lg:translate-y-0.5 bg-center bg-contain  flex-shrink-0 transform;
         background-image: url(../img/icons/checkbox_blue.svg);
       }
     }

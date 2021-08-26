@@ -31,7 +31,7 @@ h3 {
 }
 .pre-title {
   @apply text-sm text-text-disabled font-normal uppercase;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.45rem;
 }
 .section-title {
   @apply text-left lg:text-center mb-7 lg:mb-[3.125rem];

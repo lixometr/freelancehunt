@@ -62,6 +62,9 @@ export class TabsCategories {
     }
     if (newBlock) {
       const showPromise = this.showBlock(newBlock, dir);
+      if (!this.isMob) {
+        await showPromise;
+      }
       promises.push(showPromise);
     }
     if (this.isMob) {
