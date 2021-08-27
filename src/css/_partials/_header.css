@@ -34,7 +34,7 @@
 
 .header-menus {
   @apply invisible opacity-0 fixed top-20 left-0 right-0 min-h-[330px] bg-white z-100 shadow-main py-5
-  border-t border-blue-200 transition-all ;
+  border-t border-blue-200 transition-all duration-300;
   &.open {
     @apply lg:visible;
   }
