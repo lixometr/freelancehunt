@@ -35,6 +35,7 @@
         @apply ml-2.5;
       }
     }
+   
     &.open {
       .tags-item {
         @apply inline-flex !important;

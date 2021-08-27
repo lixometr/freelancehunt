@@ -12,7 +12,7 @@
         @apply lg:hidden block absolute right-0 w-16 h-full z-10 pointer-events-none;
         background-image: linear-gradient(
           to right,
-          transparent 0%,
+          rgba(255, 255, 255, 0) 0%,
           theme("colors.bg.200") 70%,
           theme("colors.bg.200") 100%
         );

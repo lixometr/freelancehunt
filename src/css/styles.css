@@ -88,7 +88,7 @@
     }
 
     &__image {
-      @apply absolute right-0 bottom-0 z-0 hidden lg:block;
+      @apply absolute right-4 bottom-5 z-0 hidden lg:block;
       img {
         @apply h-[180px] w-auto;
       }

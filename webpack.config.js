@@ -77,6 +77,8 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     watchContentBase: true,
+    // host: '0.0.0.0',
+    // useLocalIp: true,
   },
   devtool: production ? "eval" : 'source-map',
   mode: production ? "production" : "development",

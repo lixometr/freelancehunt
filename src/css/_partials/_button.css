@@ -4,7 +4,7 @@
   &-lg {
     @apply p1 py-4 lg:py-4.5 px-[2.375rem] font-bold;
   }
-  svg, {
+  svg {
     @apply ml-2.5;
   }
   &-blue {

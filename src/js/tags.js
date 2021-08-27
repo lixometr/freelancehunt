@@ -15,6 +15,7 @@ export class Tags {
     this.isOpen = true;
 
     this.el.classList.add("open");
+    this.el.classList.add('opened')
     this.moreTextEl.innerHTML = this.lessText;
   }
   hideMore() {
