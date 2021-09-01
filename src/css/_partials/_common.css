@@ -10,7 +10,9 @@ h2 {
 h3 {
   @apply h3;
 }
-
+.no-scroll {
+  @apply !overflow-hidden;
+}
 .container {
   @apply max-w-[1160px] mx-auto px-5;
 }

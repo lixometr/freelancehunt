@@ -42,7 +42,10 @@ onReady(() => {
     new TabsCategories(".projects-tabs");
   })();
   (function () {
-    new Menu(".menu-mob", ".menu-mob-overlay", ".burger");
+    new Menu(".menu-mob", ".menu-mob-overlay", ".burger", {
+      stopScroll: true,
+    });
+
     const accordions = [];
     document.querySelectorAll(".menu-mob__item").forEach((item) => {
       const acc = new Accordion(item, false);
@@ -57,6 +60,8 @@ onReady(() => {
     });
   })();
   (function () {
-    new Menu(".menu-auth", ".menu-auth-overlay", ".header-account");
+    new Menu(".menu-auth", ".menu-auth-overlay", ".header-account", {
+      stopScroll: true,
+    });
   })();
 });

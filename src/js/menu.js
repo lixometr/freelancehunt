@@ -1,9 +1,11 @@
 import { eventMixin } from "./event";
+import useStopScroll from "./useStopScroll";
 const menus = [];
 
 export class Menu {
-  constructor(menu, overlay, trigger) {
+  constructor(menu, overlay, trigger, options) {
     Object.assign(this, eventMixin);
+    this.options = options || {};
     this.el = typeof menu === "string" ? document.querySelector(menu) : menu;
     this.overlay =
       typeof overlay === "string" ? document.querySelector(overlay) : overlay;
@@ -46,6 +48,24 @@ export class Menu {
       this.open();
     }
   }
+  setScroll(state) {
+    const { stop: stopScroll, reset: resetScroll } = useStopScroll();
+    if (state === "stop") {
+      stopScroll();
+    } else {
+      resetScroll();
+    }
+  }
+  addInnerListeners() {
+    if (this.options.stopScroll) {
+      this.on("open", () => {
+        this.setScroll("stop");
+      });
+      this.on("close", () => {
+        this.setScroll("reset");
+      });
+    }
+  }
   init() {
     this.trigger.addEventListener("click", (e) => {
       e.preventDefault();
@@ -54,5 +74,6 @@ export class Menu {
     this.overlay.addEventListener("click", () => {
       this.close();
     });
+    this.addInnerListeners();
   }
 }
