@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/Montserrat-Regular.woff) format("woff")
+  src: url(/fonts/Montserrat-Regular.woff) format("woff"),
     url(/fonts/Montserrat-Regular.ttf) format("opentype");
 }
 
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/fonts/Montserrat-Medium.woff) format("woff")
+  src: url(/fonts/Montserrat-Medium.woff) format("woff"),
     url(/fonts/Montserrat-Medium.ttf) format("opentype");
 }
 
@@ -21,6 +21,6 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/Montserrat-Bold.woff) format("woff")
+  src: url(/fonts/Montserrat-Bold.woff) format("woff"),
     url(/fonts/Montserrat-Bold.ttf) format("opentype");
 }
