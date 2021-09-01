@@ -70,6 +70,13 @@ module.exports = {
             ignore: ["*.DS_Store"],
           },
         },
+        {
+          from: path.resolve(__dirname, "./src/fonts"),
+          to: "fonts",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+        },
       ],
     }),
   ].filter(Boolean),
