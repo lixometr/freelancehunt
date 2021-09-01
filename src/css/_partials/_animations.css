@@ -1,9 +1,3 @@
-.t-fadeIn {
-  animation: fadeIn 0.3s ease-in-out;
-}
-.t-fadeOut {
-  animation: fadeOut 0.3s ease-in-out;
-}
 .t-slideLeftEnter {
   animation: slideLeftEnter 0.3s ease-in-out;
   @screen lg {

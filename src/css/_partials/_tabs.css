@@ -1,10 +1,10 @@
 .categories-tabs {
   @apply flex flex-col lg:flex-row lg:items-start;
   &-categories {
-    @apply lg:w-[400px] mb-5 lg:flex-shrink-0 lg:mr-[4.5rem] lg:mb-0 max-w-full relative;
+    @apply lg:w-[400px] mb-[1.875rem] lg:flex-shrink-0 lg:mr-[4.5rem] lg:mb-0 max-w-full relative;
 
     .swiper-wrapper {
-      @apply lg:space-y-4 lg:flex-col;
+      @apply lg:space-y-4.5 lg:flex-col;
     }
     .swiper-container {
       &::before {
@@ -33,7 +33,7 @@
       &::before {
         content: "";
         @apply w-full h-0.5 rounded-full bg-blue block absolute left-0 right-0 top-auto bottom-0 flex-shrink-0 opacity-0 
-        lg:mr-5 lg:right-auto lg:top-0 lg:h-full lg:w-1;
+        lg:mr-5 lg:right-auto lg:h-auto lg:top-1 lg:bottom-1 lg:w-1;
       }
       &.active {
         @apply text-black pl-0 lg:pl-5 font-bold hover:text-black !important;

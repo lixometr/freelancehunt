@@ -30,11 +30,11 @@ export class TabsCategories {
     this.activeIdx = index;
     this.updateContent(prevIdx);
     this.updateCategories();
-    this.updateSlider()
+    this.updateSlider();
   }
   updateSlider() {
-    if(!this.categoriesSlider) return
-    this.categoriesSlider.slideTo(this.activeIdx)
+    if (!this.categoriesSlider) return;
+    this.categoriesSlider.slideTo(this.activeIdx);
   }
   updateCategories() {
     this.categories.forEach((cat) => cat.classList.remove("active"));
@@ -108,7 +108,7 @@ export class TabsCategories {
   }
   checkSlider() {
     if (bpLess("lg")) {
-      if (this.categorySliderInited) return;
+      if (this.categoriesSlider) return;
       const swiperContainer =
         this.categoryBlock.querySelector(".swiper-container");
       const arrowRight = this.categoryBlock.querySelector(
@@ -136,12 +136,11 @@ export class TabsCategories {
         }
         // console.log(active, total, e);
       });
-      this.categorySliderInited = true;
     } else {
-      if (this.categorySliderInited) {
+      if (this.categoriesSlider) {
         this.categoriesSlider.destroy();
+        this.categoriesSlider = null;
       }
-      this.categorySliderInited = false;
     }
   }
   checkMob() {
