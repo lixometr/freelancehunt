@@ -37,7 +37,9 @@ class HeaderMenu {
     this.isOpen = false;
     this.el.classList.remove("opened");
     const listener = () => {
-      this.el.classList.remove("open");
+      if (!this.isOpen) {
+        this.el.classList.remove("open");
+      }
       this.el.removeEventListener("transitionend", listener);
     };
     this.el.addEventListener("transitionend", listener);
@@ -68,9 +70,9 @@ class HeaderMenu {
   }
   init() {
     this.triggers.forEach((trigger, idx) => {
-      trigger.addEventListener('click', e => {
-        e.preventDefault()
-      })
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
       trigger.addEventListener("mouseenter", () => {
         this.updateIndex(idx);
         if (!this.isOpen) {

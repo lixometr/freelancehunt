@@ -1,15 +1,15 @@
 .categories-tabs {
-  @apply flex flex-col lg:flex-row lg:items-start;
+  @apply flex flex-col md:flex-row md:items-start;
   &-categories {
-    @apply lg:w-[400px] mb-[1.875rem] lg:flex-shrink-0 lg:mr-[4.5rem] lg:mb-0 max-w-full relative;
+    @apply md:w-[400px] mb-[1.875rem] md:flex-shrink-0 md:mr-[4.5rem] md:mb-0 max-w-full relative;
 
     .swiper-wrapper {
-      @apply lg:space-y-4.5 lg:flex-col;
+      @apply md:space-y-4.5 md:flex-col;
     }
     .swiper-container {
       &::before {
         content: "";
-        @apply lg:hidden block absolute right-0 w-16 h-full z-10 pointer-events-none;
+        @apply md:hidden block absolute right-0 w-16 h-full z-10 pointer-events-none;
         background-image: linear-gradient(
           to right,
           rgba(255, 255, 255, 0) 0%,
@@ -22,21 +22,21 @@
       }
     }
     &__arrow {
-      @apply absolute right-0 top-1 lg:hidden z-20 cursor-pointer;
+      @apply absolute right-0 top-1 md:hidden z-20 cursor-pointer;
       &.swiper-button-disabled {
         @apply hidden;
       }
     }
     &__item {
       @apply w-auto relative flex text-lg pb-2 text-text-subdued font-medium hover:text-blue 
-      lg:text-2xl lg:w-full pl-[0.25em] lg:pl-5 lg:pb-0  !important;
+      md:text-2xl md:w-full pl-[0.25em] md:pl-5 md:pb-0  !important;
       &::before {
         content: "";
         @apply w-full h-0.5 rounded-full bg-blue block absolute left-0 right-0 top-auto bottom-0 flex-shrink-0 opacity-0 
-        lg:mr-5 lg:right-auto lg:h-auto lg:top-1 lg:bottom-1 lg:w-1;
+        md:mr-5 md:right-auto md:h-auto md:top-1 md:bottom-1 md:w-1;
       }
       &.active {
-        @apply text-black pl-0 lg:pl-5 font-bold hover:text-black !important;
+        @apply text-black pl-0 md:pl-5 font-bold hover:text-black !important;
       }
       &.active::before {
         @apply opacity-100;
@@ -44,7 +44,7 @@
     }
   }
   &-content {
-    @apply flex-1 flex overflow-hidden lg:overflow-visible -mr-7;
+    @apply flex-1 flex overflow-hidden md:overflow-visible -mr-7;
     &-block {
       @apply hidden w-full flex-none pr-7;
       &.active {

@@ -36,7 +36,7 @@ new Swiper(".for-orders-slider", {
   slidesOffsetAfter: 20,
   slidesOffsetBefore: 20,
   breakpoints: {
-    [breakpoints.lg]: {
+    [breakpoints.md]: {
       resistanceRatio: 0,
       slidesPerView: 2,
       spaceBetween: 24,

@@ -7,7 +7,7 @@ module.exports = plugin(({ addUtilities, theme }) => {
         fontSize: theme("fontSize.2xl"),
         fontWeight: theme("fontWeight.bold"),
         lineHeight: theme("lineHeight.7"),
-        "@screen lg": {
+        "@screen md": {
           fontSize: theme("fontSize.6xl"),
           lineHeight: "3.8rem",
         },
@@ -18,7 +18,7 @@ module.exports = plugin(({ addUtilities, theme }) => {
         fontSize: theme("fontSize.2xl"),
         fontWeight: theme("fontWeight.bold"),
         lineHeight: theme("lineHeight.7"),
-        "@screen lg": {
+        "@screen md": {
           fontSize: theme("fontSize.3xl"),
           lineHeight: theme("lineHeight.8"),
         },
@@ -29,7 +29,7 @@ module.exports = plugin(({ addUtilities, theme }) => {
         fontSize: theme("fontSize.lg"),
         fontWeight: theme("fontWeight.bold"),
         lineHeight: theme("lineHeight.5"),
-        "@screen lg": {
+        "@screen md": {
           fontSize: theme("fontSize.2xl"),
           lineHeight: theme("lineHeight.8"),
         },
@@ -39,7 +39,7 @@ module.exports = plugin(({ addUtilities, theme }) => {
       ".p1": {
         fontSize: theme("fontSize.base"),
         lineHeight: theme("lineHeight.5"),
-        "@screen lg": {
+        "@screen md": {
           fontSize: theme("fontSize.lg"),
           lineHeight: theme("lineHeight.6"),
         },
@@ -50,7 +50,7 @@ module.exports = plugin(({ addUtilities, theme }) => {
         fontSize: theme("fontSize.sm"),
         lineHeight: theme("lineHeight.4"),
 
-        "@screen lg": {
+        "@screen md": {
           fontSize: theme("fontSize.base"),
           lineHeight: theme("lineHeight.5"),
         },
@@ -61,7 +61,7 @@ module.exports = plugin(({ addUtilities, theme }) => {
         fontSize: theme("fontSize.xs"),
         lineHeight: theme("lineHeight.3"),
 
-        "@screen lg": {
+        "@screen md": {
           fontSize: theme("fontSize.sm"),
           lineHeight: theme("lineHeight.4"),
         },

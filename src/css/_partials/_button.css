@@ -2,7 +2,7 @@
   @apply outline-none py-2.5 px-[1.625rem] leading-none text-white rounded-full 
     inline-flex items-center justify-center transition-colors;
   &-lg {
-    @apply p1 py-4 lg:py-4.5 px-[2.375rem] font-bold;
+    @apply p1 py-4 md:py-4.5 px-[2.375rem] font-bold;
   }
   svg {
     @apply ml-2.5;

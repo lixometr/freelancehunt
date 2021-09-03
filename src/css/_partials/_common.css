@@ -29,16 +29,16 @@ h3 {
 }
 
 .section-offset {
-  @apply pt-20 lg:pt-[130px];
+  @apply pt-20 md:pt-[130px];
 }
 .pre-title {
   @apply text-sm text-text-disabled font-normal uppercase;
   letter-spacing: 0.45rem;
 }
 .section-title {
-  @apply text-left lg:text-center mb-7 lg:mb-[3.125rem];
+  @apply text-left md:text-center mb-7 md:mb-[3.125rem];
   .pre-title {
-    @apply mb-4 lg:mb-2.5;
+    @apply mb-4 md:mb-2.5;
   }
 }
 

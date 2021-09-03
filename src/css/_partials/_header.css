@@ -1,16 +1,16 @@
 .header {
-  @apply py-2.5  lg:h-20 lg:py-0 bg-bg-200 border-b border-blue-200 lg:border-none fixed top-0 left-0 right-0 z-200 transition-all;
+  @apply py-2.5 md:h-[4.5rem] lg:h-20 md:py-0 bg-bg-200 border-b border-blue-200 md:border-none fixed top-0 left-0 right-0 z-200 transition-all;
   &__row {
     @apply flex-y-center justify-between h-full;
   }
   &__logo {
-    @apply w-[140px] lg:w-[200px];
+    @apply w-[140px] md:w-[148px] lg:w-[200px];
   }
   &__actions {
-    @apply space-x-5 hidden lg:flex items-center;
+    @apply space-x-5 hidden md:flex items-center;
   }
   &__menu-wrapper {
-    @apply hidden lg:flex self-stretch items-center;
+    @apply hidden md:flex self-stretch items-center;
   }
   &__menu {
     @apply space-x-10 flex-y-center;
@@ -22,10 +22,10 @@
     }
   }
   &__burger {
-    @apply cursor-pointer block lg:hidden;
+    @apply cursor-pointer block md:hidden;
   }
   &__account {
-    @apply cursor-pointer block lg:hidden;
+    @apply cursor-pointer block md:hidden;
   }
   /* &.fix {
     @apply bg-bg-200;
@@ -33,17 +33,17 @@
 }
 
 .header-menus {
-  @apply invisible opacity-0 fixed top-20 left-0 right-0 min-h-[330px] bg-white z-100 shadow-main py-5
-  border-t border-blue-200 transition-all duration-300;
+  @apply invisible opacity-0 fixed lg:top-20 left-0 right-0 min-h-[330px] bg-white z-100 shadow-main py-5
+  border-t border-blue-200 transition-all duration-300 md:top-[4.5rem];
   &.open {
-    @apply lg:visible;
+    @apply md:visible;
   }
   &.opened {
     @apply opacity-100 ;
   }
 }
 .header-menu {
-  @apply hidden;
+  @apply hidden md:max-w-[750px] md:mx-auto lg:max-w-none;
   &.open {
     @apply block;
   }
@@ -69,7 +69,7 @@
     }
   }
   &__image {
-    @apply w-[300px] h-[260px] flex-shrink-0 ml-14 relative;
+    @apply w-[300px] h-[260px] flex-shrink-0 ml-14 relative md:hidden lg:inline-block;
     img {
       @apply absolute inset-0 h-full w-full object-contain;
     }

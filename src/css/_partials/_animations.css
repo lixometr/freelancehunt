@@ -1,24 +1,24 @@
 .t-slideLeftEnter {
   animation: slideLeftEnter 0.3s ease-in-out;
-  @screen lg {
+  @screen md {
     animation: fadeIn 0.3s ease-in-out;
   }
 }
 .t-slideLeftLeave {
   animation: slideLeftLeave 0.3s ease-in-out;
-  @screen lg {
+  @screen md {
     animation: fadeOut 0.3s ease-in-out;
   }
 }
 .t-slideRightEnter {
   animation: slideRightEnter 0.3s ease-in-out;
-  @screen lg {
+  @screen md {
     animation: fadeIn 0.3s ease-in-out;
   }
 }
 .t-slideRightLeave {
   animation: slideRightLeave 0.3s ease-in-out;
-  @screen lg {
+  @screen md {
     animation: fadeOut 0.3s ease-in-out;
   }
 }

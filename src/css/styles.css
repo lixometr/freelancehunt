@@ -13,44 +13,52 @@
 @import "swiper/swiper-bundle.css";
 
 .hero {
-  @apply pt-[3.5rem] lg:pt-[12rem] bg-bg-400 overflow-hidden dark:bg-bg-800;
+  @apply pt-[3.5rem] md:pt-[10rem] lg:pt-[12rem] bg-bg-400 overflow-hidden dark:bg-bg-800;
+  h1 {
+    @apply h1 md:text-4xl lg:h1;
+  }
   &__main {
-    @apply relative pb-12 flex flex-col lg:pb-20;
+    @apply relative pb-12 flex flex-col md:pb-20;
   }
   &__content {
-    @apply order-2 lg:order-1 lg:max-w-[660px] lg:relative z-10;
+    @apply order-2 md:order-1  md:relative md:max-w-[500px] lg:max-w-[660px] z-10;
   }
   &__description {
-    @apply max-w-[450px] text-sm lg:text-2xl !font-medium text-text-subdued;
+    @apply max-w-[280px] md:max-w-[480px] lg:max-w-[450px] text-sm lg:text-2xl !font-medium text-text-subdued;
   }
   &__image {
     @apply w-full relative order-1 mb-3 
-    lg:right-[-70px] lg:mb-0 lg:order-2 lg:absolute lg:top-[60px] lg:z-0 lg:w-[720px]
+    md:absolute md:mb-0 md:order-2 md:z-0
+    md:w-[460px] md:right-[0px]
+    lg:right-[-70px] lg:top-[60px] lg:w-[720px]
     xl:right-[-120px];
   }
   &__actions {
-    @apply mt-10 flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:space-x-5;
+    @apply mt-10 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:space-x-5;
   }
   &__btn {
-    @apply w-[280px] lg:w-auto;
+    @apply w-[280px] md:w-auto;
+  }
+
+  &__bg-1,
+  &__bg-2 {
+    @apply pointer-events-none z-0 hidden;
   }
   &__bg-1 {
     @apply absolute left-[-80px] top-[-50px] bg-white 
-      w-[200px] h-[270px] rounded-2xl dark:bg-black-700;
+      w-[200px] h-[270px] rounded-2xl dark:bg-black-700 lg:block;
   }
   &__bg-2 {
-    @apply absolute right-[-40px] top-[35px] bg-white 
-      w-[370px] h-[200px] rounded-2xl xl:right-[-90px] dark:bg-black-700;
-  }
-  &__bg-1,
-  &__bg-2 {
-    @apply pointer-events-none z-0 hidden lg:block;
+    @apply absolute  bg-white 
+      md:w-[225px] md:h-[122px] md:right-[40px] md:top-[-13px]
+      lg:right-[-40px] lg:top-[35px]
+      lg:w-[370px] lg:h-[200px] rounded-2xl xl:right-[-90px] dark:bg-black-700 md:block;
   }
   &-clients {
-    @apply flex flex-col py-5 
+    @apply flex flex-col pb-5 
         lg:flex-row lg:items-center lg:py-10 border-none lg:border-solid lg:border-t lg:border-blue-200;
     &__title {
-      @apply text-xs mb-3 lg:text-base lg:mb-0 lg:mr-20;
+      @apply text-xs mb-3 md:mb-5 md:text-base lg:mb-0 lg:mr-20;
     }
 
     &__slider {
@@ -67,31 +75,31 @@
 
 .for-orders {
   &-slider {
-    @apply -mx-5 lg:px-5 !important;
+    @apply -mx-5 md:px-5 !important;
   }
   &-item {
-    @apply flex flex-col relative min-h-[240px] shadow-main py-7 px-5 lg:p-7 bg-white rounded-xl
-    lg:min-h-[260px];
+    @apply flex flex-col relative min-h-[240px] shadow-main py-7 px-5 md:p-7 bg-white rounded-xl
+    md:min-h-[260px];
     &__content {
       @apply max-w-[350px] flex-1 flex flex-col items-start relative z-10 h-full;
     }
     &__title {
-      @apply h3 mb-2.5;
+      @apply leading-tight font-bold text-lg md:text-2xl mb-2.5;
       span {
         @apply text-blue whitespace-nowrap;
       }
     }
     &__description {
-      @apply p2;
+      @apply p2 md:text-base md:max-w-[280px] lg:max-w-none;
     }
     &__btn {
       @apply mt-auto w-full xs:w-auto;
     }
 
     &__image {
-      @apply absolute right-4 bottom-5 z-0 hidden lg:block;
+      @apply absolute right-3 bottom-5 z-0 hidden md:block md:right-2;
       img {
-        @apply h-[180px] w-auto;
+        @apply h-[162px] w-auto;
       }
     }
   }
@@ -138,20 +146,25 @@
   &-items {
     @apply flex items-start;
   }
+  &-tabs {
+    &__content {
+      @apply md:max-w-[478px] md:ml-auto lg:ml-0 lg:max-w-none;
+    }
+  }
   &-item {
     &-main {
-      @apply flex-1 lg:flex-none lg:w-[260px] flex-shrink-0 block shadow-main rounded-xl overflow-hidden mr-5 lg:mr-6;
+      @apply flex-1 md:flex-none md:w-[260px] flex-shrink-0 block shadow-main rounded-xl overflow-hidden mr-5 lg:mr-6;
       &__content {
-        @apply hidden lg:block py-7 px-5 bg-white;
+        @apply hidden md:block py-7 px-5 bg-white;
       }
       &__name {
         @apply p1 font-bold;
       }
       &__image {
-        @apply pb-[100%] lg:pb-0 relative;
+        @apply pb-[100%] md:pb-0 relative;
 
         img {
-          @apply h-full lg:h-[225px] w-full object-cover absolute inset-0 lg:relative filter hover:brightness-75 transition-all  rounded-tr-xl rounded-tl-xl;
+          @apply h-full md:h-[225px] w-full object-cover absolute inset-0 md:relative filter hover:brightness-75 transition-all  rounded-tr-xl rounded-tl-xl;
         }
       }
       &__category {
@@ -171,9 +184,9 @@
       }
     }
     &-rest {
-      @apply flex-1 lg:flex items-start justify-start flex-wrap lg:-m-3;
+      @apply flex-1 md:flex items-start justify-start flex-wrap md:-m-3;
       &__item {
-        @apply hidden lg:block  relative w-full lg:w-1/2 lg:p-3;
+        @apply hidden md:first:block lg:block  relative w-full lg:w-1/2 md:p-3;
 
         img {
           @apply w-full h-full object-cover rounded-xl shadow-main filter hover:brightness-75 transition-all;
@@ -197,48 +210,48 @@
     }
   }
   .tags-block {
-    @apply mt-8 lg:mt-[3.125rem];
+    @apply mt-8 md:mt-[3.125rem];
   }
 }
 
 .for-freelancers {
   &__row {
-    @apply flex flex-col items-center  lg:items-start lg:flex-row;
+    @apply flex flex-col items-center  md:items-start md:flex-row;
   }
   &__list,
   &__actions,
   &__image {
-    @apply max-w-[280px] lg:max-w-none mx-auto;
+    @apply max-w-[280px] md:max-w-none mx-auto;
   }
   &__image {
-    @apply mb-3  lg:mb-0 lg:max-w-none lg:w-[420px] lg:mr-14;
+    @apply mb-3 md:mb-0 md:max-w-none md:w-[356px] md:mr-4 md:mt-8 md:ml-10 lg:ml-4 lg:mt-2 lg:w-[420px] lg:mr-14;
   }
   &__content {
     @apply flex-1;
   }
   &__list {
-    @apply lg:h3 !font-medium text-sm space-y-3  lg:text-2xl lg:space-y-6;
+    @apply md:h3 !font-medium text-sm space-y-3 md:text-2xl md:space-y-6;
     li {
       @apply flex items-start max-w-[460px];
       &::before {
         content: "";
-        @apply w-[20px] mr-2.5 h-[20px] translate-y-0 lg:w-[26px] lg:h-[26px] lg:mr-5 lg:translate-y-0.5 bg-center bg-contain  flex-shrink-0 transform;
+        @apply w-[20px] mr-2.5 h-[20px] translate-y-0 md:w-[26px] md:h-[26px] md:mr-5 md:translate-y-0.5 bg-center bg-contain  flex-shrink-0 transform;
         background-image: url(../img/icons/checkbox_blue.svg);
       }
     }
   }
   &__actions {
-    @apply mt-10 flex flex-col items-center space-y-2.5 lg:space-y-0 lg:flex-row lg:space-x-5;
+    @apply mt-10 flex flex-col items-center space-y-2.5 md:space-y-0 md:flex-row md:space-x-5;
     .btn {
-      @apply flex-shrink-0 w-full lg:w-auto;
+      @apply flex-shrink-0 w-full md:w-auto;
     }
     &-text {
-      @apply leading-6 text-sm text-center lg:text-left;
+      @apply leading-6 text-sm text-center md:text-left;
     }
   }
 
   &__tooltip {
-    @apply mt-5  p3 !leading-5 lg:!leading-6 text-center text-text-disabled lg:text-text-subdued lg:text-left;
+    @apply mt-5  p3 !leading-5 md:!leading-6 text-center text-text-disabled md:text-text-subdued md:text-left;
   }
 }
 .projects {
@@ -253,29 +266,29 @@
 
 .vacancies {
   &__row {
-    @apply flex flex-col items-center  lg:items-start lg:flex-row;
+    @apply flex flex-col items-center  md:items-start md:flex-row;
   }
   &__text {
     @apply h3 !font-medium;
   }
   &__actions,
   &__image {
-    @apply max-w-[280px] lg:max-w-none mx-auto;
+    @apply max-w-[280px] md:max-w-none mx-auto;
   }
   &__image {
-    @apply mb-3 lg:mb-0 lg:max-w-none lg:w-[420px] lg:mr-14;
+    @apply mb-3 md:mb-0 md:max-w-none md:w-[350px] lg:w-[420px] md:mr-14;
   }
   &__content {
     @apply flex-1;
   }
 
   &__actions {
-    @apply mt-10 flex flex-col items-center space-y-2.5 lg:space-y-0 lg:flex-row lg:space-x-5;
+    @apply mt-10 flex flex-col items-center space-y-2.5 md:space-y-0 md:flex-row md:space-x-5;
     .btn {
-      @apply flex-shrink-0 w-full lg:w-auto;
+      @apply flex-shrink-0 w-full md:w-auto;
     }
     &-text {
-      @apply leading-6 text-sm text-center lg:text-left;
+      @apply leading-6 text-sm text-center md:text-left;
     }
   }
   &__tags {
@@ -283,7 +296,7 @@
   }
   .tags-block {
     &__title {
-      @apply text-2xl lg:text-lg;
+      @apply text-2xl md:text-lg;
     }
   }
 }

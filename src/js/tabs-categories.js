@@ -107,7 +107,7 @@ export class TabsCategories {
     });
   }
   checkSlider() {
-    if (bpLess("lg")) {
+    if (bpLess("md")) {
       if (this.categoriesSlider) return;
       const swiperContainer =
         this.categoryBlock.querySelector(".swiper-container");
@@ -144,7 +144,7 @@ export class TabsCategories {
     }
   }
   checkMob() {
-    const isMob = bpLess("lg");
+    const isMob = bpLess("md");
     this.isMob = isMob;
   }
   init() {

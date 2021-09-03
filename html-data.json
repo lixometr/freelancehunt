@@ -186,7 +186,8 @@
     ],
     "projects": [
         {
-            "image": "img/service_1.png",
+            "image": "img/projects/programming.jpg",
+            "image2x": "img/projects/programming@2x.jpg",
             "tags": [
                 {
                     "name": "Баннеры",
@@ -247,7 +248,206 @@
             ]
         },
         {
-            "image": "img/service_1.png",
+            "image": "img/projects/design.jpg",
+            "image2x": "img/projects/design@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/services.jpg",
+            "image2x": "img/projects/services@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/audio.jpg",
+            "image2x": "img/projects/audio@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/promotion.jpg",
+            "image2x": "img/projects/promotion@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/architecture.jpg",
+            "image2x": "img/projects/architecture@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/mobile_app.jpg",
+            "image2x": "img/projects/mobile_app@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/administration.jpg",
+            "image2x": "img/projects/administration@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/consulting.jpg",
+            "image2x": "img/projects/consulting@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/translations.jpg",
+            "image2x": "img/projects/translations@2x.jpg",
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "image": "img/projects/text_work.jpg",
+            "image2x": "img/projects/text_work@2x.jpg",
             "tags": [
                 {
                     "name": "php",
