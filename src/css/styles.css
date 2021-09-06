@@ -28,7 +28,9 @@
   }
   &__image {
     @apply w-full relative order-1 mb-3 
-    max-w-[460px] mx-auto
+    max-w-[460px]
+    md:max-w-none
+    md:w-[460px] mx-auto
     md:absolute md:mb-0 md:order-2 md:z-0
      md:right-[0px]
     lg:right-[-70px] lg:top-[60px] lg:w-[720px]
