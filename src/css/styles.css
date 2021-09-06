@@ -10,7 +10,7 @@
 @import "./_partials/_menu-mob";
 @import "./_partials/_tags";
 @import "./_partials/_animations";
-@import "swiper/swiper-bundle.css";
+@import "./_partials/_swiper-custom";
 
 .hero {
   @apply pt-[3.5rem] md:pt-[10rem] lg:pt-[12rem] bg-bg-400 overflow-hidden dark:bg-bg-800;
