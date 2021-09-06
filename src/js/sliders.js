@@ -1,30 +1,40 @@
 import SwiperCore, { Navigation, Pagination } from "swiper/core";
 import Swiper from "swiper";
+import { bpLess } from "./helpers";
 SwiperCore.use([Navigation, Pagination]);
 import breakpoints from "./breakpoints";
-
-new Swiper(".clients-slider", {
-  slidesPerView: "auto",
-  spaceBetween: 27,
-  breakpoints: {
-    // [breakpoints.sm]: {
-    //   slidesPerView: 'auto',
-    //   spaceBetween: 77
-    // },
-
-    [breakpoints.sm]: {
-      slidesPerView: 6,
-      spaceBetween: 77,
-      resistanceRatio: 0.85,
-    },
-    [breakpoints.lg]: {
-      resistanceRatio: 0,
-      slidesPerView: 6,
-      spaceBetween: 77,
-    },
-  },
-});
-
+(function () {
+  let slider = null;
+  const checkSlider = () => {
+    if (bpLess("md")) {
+      if (slider) return;
+      slider = new Swiper(".clients-slider", {
+        slidesPerView: "auto",
+        spaceBetween: 27,
+        breakpoints: {
+          // [breakpoints.sm]: {
+          //   slidesPerView: 'auto',
+          //   spaceBetween: 77
+          // },
+          [breakpoints.xs]: {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+          },
+          [breakpoints.sm]: {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+          },
+        },
+      });
+    } else {
+      if (!slider) return;
+      slider.destroy();
+      slider = null;
+    }
+  };
+  checkSlider();
+  window.addEventListener("resize", checkSlider);
+})();
 new Swiper(".for-orders-slider", {
   threshold: 5,
   slidesPerView: 1.3,

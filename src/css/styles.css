@@ -28,8 +28,9 @@
   }
   &__image {
     @apply w-full relative order-1 mb-3 
+    max-w-[460px] mx-auto
     md:absolute md:mb-0 md:order-2 md:z-0
-    md:w-[460px] md:right-[0px]
+     md:right-[0px]
     lg:right-[-70px] lg:top-[60px] lg:w-[720px]
     xl:right-[-120px];
   }
@@ -60,7 +61,9 @@
     &__title {
       @apply text-xs mb-3 md:mb-5 md:text-base lg:mb-0 lg:mr-20;
     }
-
+    .swiper-wrapper {
+      @apply flex-y-center justify-between;
+    }
     &__slider {
       @apply flex-1 min-w-0 w-full lg:w-auto;
     }

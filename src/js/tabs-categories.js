@@ -121,6 +121,7 @@ export class TabsCategories {
         },
         threshold: 5,
         spaceBetween: 20,
+        slidesOffsetAfter: 10
       });
       // this.categoriesSlider.on('reachEnd', () => {
       //   console.log('end')
