@@ -1,6 +1,7 @@
 import { eventMixin } from "./event";
 import { onReady } from "./helpers";
 import { Menu } from "./menu";
+import useStopScroll from "./useStopScroll";
 class HeaderMenu {
   constructor() {
     Object.assign(this, eventMixin);
@@ -11,7 +12,7 @@ class HeaderMenu {
     this.triggers = document.querySelectorAll(".header__menu-item");
     this.headerMenu = document.querySelector(".header__menu-wrapper");
     this.activeMenu = "";
-    this.activeIdx = 0;
+    this.activeIdx = null;
     this.isOpen = false;
     this.closeHandler = this._closeHandler.bind(this);
     this.init();
@@ -30,7 +31,7 @@ class HeaderMenu {
     this.isOpen = true;
     this.emit("open");
 
-    this.addCloseEvent();
+    setTimeout(() => this.addCloseEvent(), 0);
   }
   close() {
     if (!this.isOpen) return;
@@ -54,12 +55,26 @@ class HeaderMenu {
     this.removeCloseEvent();
   }
   removeCloseEvent() {
-    this.headerMenu.removeEventListener("mouseleave", this.closeHandler);
+    if (this.isTouchDevice()) {
+      this.triggers.forEach((trigger) => {
+        trigger.removeEventListener("click", this.closeHandler);
+      });
+    } else {
+      this.headerMenu.removeEventListener("mouseleave", this.closeHandler);
+    }
   }
   addCloseEvent() {
-    this.headerMenu.addEventListener("mouseleave", this.closeHandler);
+    if (this.isTouchDevice()) {
+      this.triggers.forEach((trigger, idx) => {
+        if (this.activeIdx !== idx) return;
+        trigger.addEventListener("click", this.closeHandler);
+      });
+    } else {
+      this.headerMenu.addEventListener("mouseleave", this.closeHandler);
+    }
   }
   updateIndex(idx) {
+    if(this.activeIdx === idx) return
     this.activeIdx = idx;
     this.triggers.forEach((trigger) => trigger.classList.remove("open"));
     const trigger = this.getActiveTrigger();
@@ -67,19 +82,44 @@ class HeaderMenu {
     this.menus.forEach((m) => m.classList.remove("open"));
     const menu = this.getActiveMenu();
     menu.classList.add("open");
+    if(this.isTouchDevice()) {
+      this.removeCloseEvent()
+      this.addCloseEvent()
+    }
+  }
+  isTouchDevice() {
+    return (
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0
+    );
   }
   init() {
     this.triggers.forEach((trigger, idx) => {
       trigger.addEventListener("click", (e) => {
         e.preventDefault();
       });
-      trigger.addEventListener("mouseenter", () => {
-        this.updateIndex(idx);
-        if (!this.isOpen) {
-          this.open();
-        }
-      });
+      if (this.isTouchDevice()) {
+        trigger.addEventListener("click", () => {
+          this.updateIndex(idx);
+          if (!this.isOpen) {
+            this.open();
+          }
+        });
+      } else {
+        trigger.addEventListener("mouseenter", () => {
+          this.updateIndex(idx);
+          if (!this.isOpen) {
+            this.open();
+          }
+        });
+      }
     });
+    if (this.isTouchDevice()) {
+      this.overlay.addEventListener("click", () => {
+        this.close();
+      });
+    }
   }
 }
 onReady(() => {
@@ -105,13 +145,16 @@ onReady(() => {
   ];
   let menuOpen = false;
   let scrollMore = false;
+  const { stop: stopScroll, reset: resetScroll } = useStopScroll();
   // menus.forEach((menu) => {
   menu.on("open", () => {
     header.classList.add("fix");
     menuOpen = true;
+    stopScroll();
   });
   menu.on("close", () => {
     menuOpen = false;
+    resetScroll();
 
     if (scrollMore) return;
     header.classList.remove("fix");

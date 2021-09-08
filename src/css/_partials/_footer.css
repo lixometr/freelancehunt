@@ -1,20 +1,20 @@
 .footer {
   @apply pt-[3.125rem] mt-[3.125rem] lg:mt-[7.5rem] bg-black text-white text-sm;
   &__row {
-    @apply flex flex-col items-stretch space-y-10 sm:flex-wrap sm:space-y-0 sm:flex-row  sm:items-start lg:space-x-10;
+    @apply flex flex-col items-stretch space-y-10 sm:flex-wrap sm:space-y-0 sm:flex-row  sm:items-start md:space-x-10;
   }
   a {
     @apply hover:underline;
   }
   &-col {
-    @apply lg:flex-1 sm:w-1/2;
+    @apply md:flex-1 sm:w-1/2;
     &:nth-child(1),
     &:nth-child(2) {
-      @apply sm:mb-10 lg:mb-0 !important;
+      @apply sm:mb-10 md:mb-0 !important;
     }
     &:nth-child(1),
     &:nth-child(3) {
-      @apply sm:pr-5 lg:pr-0;
+      @apply sm:pr-5 md:pr-0;
     }
     &__title {
       @apply text-lg font-bold flex-y-center justify-between;
@@ -29,6 +29,7 @@
       @apply space-y-2;
     }
     &__item {
+      @apply md:whitespace-nowrap;
       .label-new {
         @apply inline-block ml-1 transform -translate-y-2 font-bold text-[0.5rem] 
           bg-yellow px-[0.25rem] py-0.5 leading-none text-black uppercase rounded-sm;
@@ -37,18 +38,18 @@
   }
 
   &-bottom {
-    @apply mt-10 lg:mt-[3.125rem] py-5 lg:py-8 border-t border-white border-opacity-20 text-xs;
+    @apply mt-10 md:mt-[3.125rem] py-5 md:py-8 border-t border-white border-opacity-20 text-xs;
     &__row {
-      @apply flex flex-col lg:flex-row lg:justify-between lg:items-center;
+      @apply flex flex-col md:flex-row md:justify-between lg:items-center;
     }
     &__links {
-      @apply flex-y-center flex-wrap justify-between order-3 lg:order-2 lg:justify-center lg:space-x-8;
+      @apply flex-y-center flex-wrap justify-between order-3 md:order-2 md:justify-center md:space-x-8;
     }
     &__copyright {
-      @apply order-2 lg:order-1 mb-2.5 lg:mb-0;
+      @apply order-2 md:order-1 mb-2.5 md:mb-0;
     }
     &__soc {
-      @apply order-1 lg:order-3 mb-10 lg:mb-0;
+      @apply order-1 md:order-3 mb-10 md:mb-0;
     }
   }
   &-language {
@@ -59,7 +60,7 @@
   }
 
   &-soc {
-    @apply flex flex-col lg:flex-row space-y-2.5 lg:space-y-0 lg:items-center lg:space-x-5;
+    @apply flex flex-col md:flex-row space-y-2.5 md:space-y-0 md:items-center md:space-x-5;
     &__items {
       @apply flex-y-center space-x-5;
     }
