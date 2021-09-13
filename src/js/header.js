@@ -14,7 +14,9 @@ class HeaderMenu {
     this.activeMenu = "";
     this.activeIdx = null;
     this.isOpen = false;
+    this.gonnaClose = false;
     this.closeHandler = this._closeHandler.bind(this);
+    this.closeHandlerDelay = this._closeHandlerDelay.bind(this);
     this.init();
   }
   getActiveTrigger() {
@@ -27,7 +29,14 @@ class HeaderMenu {
     if (this.isOpen) return;
     this.el.classList.add("open");
     this.el.classList.add("opened");
-    this.overlay.classList.add("open");
+    const onEnd = () => {
+      if (this.isOpen) {
+        this.overlay.classList.add("open");
+      }
+
+      this.el.removeEventListener("transitionend", onEnd);
+    };
+    this.el.addEventListener("transitionend", onEnd);
     this.isOpen = true;
     this.emit("open");
 
@@ -54,13 +63,21 @@ class HeaderMenu {
     this.close();
     this.removeCloseEvent();
   }
+  _closeHandlerDelay() {
+    this.gonnaClose = true;
+    setTimeout(() => {
+      if (!this.gonnaClose) return;
+      this.close();
+      this.removeCloseEvent();
+    }, 200);
+  }
   removeCloseEvent() {
     if (this.isTouchDevice()) {
       this.triggers.forEach((trigger) => {
         trigger.removeEventListener("click", this.closeHandler);
       });
     } else {
-      this.headerMenu.removeEventListener("mouseleave", this.closeHandler);
+      this.headerMenu.removeEventListener("mouseleave", this.closeHandlerDelay);
     }
   }
   addCloseEvent() {
@@ -70,11 +87,11 @@ class HeaderMenu {
         trigger.addEventListener("click", this.closeHandler);
       });
     } else {
-      this.headerMenu.addEventListener("mouseleave", this.closeHandler);
+      this.headerMenu.addEventListener("mouseleave", this.closeHandlerDelay);
     }
   }
   updateIndex(idx) {
-    if(this.activeIdx === idx) return
+    if (this.activeIdx === idx) return;
     this.activeIdx = idx;
     this.triggers.forEach((trigger) => trigger.classList.remove("open"));
     const trigger = this.getActiveTrigger();
@@ -82,9 +99,9 @@ class HeaderMenu {
     this.menus.forEach((m) => m.classList.remove("open"));
     const menu = this.getActiveMenu();
     menu.classList.add("open");
-    if(this.isTouchDevice()) {
-      this.removeCloseEvent()
-      this.addCloseEvent()
+    if (this.isTouchDevice()) {
+      this.removeCloseEvent();
+      this.addCloseEvent();
     }
   }
   isTouchDevice() {
@@ -112,6 +129,12 @@ class HeaderMenu {
           if (!this.isOpen) {
             this.open();
           }
+        });
+        this.headerMenu.addEventListener("mouseenter", () => {
+          this.gonnaClose = false;
+          // if (!this.isOpen) {
+          //   this.open();
+          // }
         });
       }
     });

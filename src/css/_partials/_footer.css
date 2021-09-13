@@ -40,7 +40,7 @@
   &-bottom {
     @apply mt-10 md:mt-[3.125rem] py-5 md:py-8 border-t border-white border-opacity-20 text-xs;
     &__row {
-      @apply flex flex-col md:flex-row md:justify-between lg:items-center;
+      @apply flex flex-col md:flex-row md:justify-between md:items-center;
     }
     &__links {
       @apply flex-y-center flex-wrap justify-between order-3 md:order-2 md:justify-center md:space-x-8;

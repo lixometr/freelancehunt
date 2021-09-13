@@ -65,7 +65,7 @@ h3 {
   }
 }
 .overlay {
-  @apply fixed inset-0 bg-black  z-[99] invisible opacity-0 transition-all;
+  @apply fixed inset-0 bg-black  z-[99] invisible opacity-0 transition-all duration-300;
   &.open {
     @apply visible opacity-60;
   }

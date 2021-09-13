@@ -119,18 +119,15 @@ export class TabsCategories {
         navigation: {
           nextEl: arrowRight,
         },
+        observer: true,
         threshold: 5,
         spaceBetween: 20,
-        slidesOffsetAfter: 10
+        slidesOffsetAfter: 10,
       });
-      // this.categoriesSlider.on('reachEnd', () => {
-      //   console.log('end')
-      // })
-      this.categoriesSlider.on("snapIndexChange", (e) => {
-        const total = e.slides.length - 2;
-        const active = e.snapIndex;
+      setTimeout(() => this.categoriesSlider.update(), 100);
 
-        if (total <= active) {
+      this.categoriesSlider.on("snapIndexChange", (e) => {
+        if (e.isEnd) {
           swiperContainer.classList.add("last");
         } else {
           swiperContainer.classList.remove("last");
@@ -149,7 +146,6 @@ export class TabsCategories {
     this.isMob = isMob;
   }
   init() {
-    // this.initTags();
     this.categories.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();

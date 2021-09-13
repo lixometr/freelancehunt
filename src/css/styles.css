@@ -13,12 +13,12 @@
 @import "./_partials/_swiper-custom";
 
 .hero {
-  @apply pt-[3.5rem] md:pt-[10rem] lg:pt-[12rem] bg-bg-400 overflow-hidden dark:bg-bg-800;
+  @apply pt-[3.5rem] sm:pt-[8rem] md:pt-[10rem] lg:pt-[12rem] bg-bg-400 overflow-hidden dark:bg-bg-800;
   h1 {
     @apply h1 md:text-4xl lg:h1;
   }
   &__main {
-    @apply relative pb-12 flex flex-col md:pb-20;
+    @apply relative pb-12 flex flex-col sm:items-start md:pb-20;
   }
   &__content {
     @apply order-2 md:order-1  md:relative md:max-w-[500px] lg:max-w-[660px] z-10;
@@ -29,10 +29,12 @@
   &__image {
     @apply w-full relative order-1 mb-3 
     max-w-[460px]
-    md:max-w-none
-    md:w-[460px] mx-auto
-    md:absolute md:mb-0 md:order-2 md:z-0
-     md:right-[0px]
+    mx-auto
+    sm:max-w-none
+    sm:w-[460px]
+    md:w-[460px] 
+    sm:absolute sm:mb-0 sm:order-2 sm:z-0
+     sm:right-[0px]
     lg:right-[-100px] lg:top-[60px] lg:w-[756px]
     xl:right-[-156px];
   }
@@ -53,9 +55,9 @@
   }
   &__bg-2 {
     @apply absolute  bg-white 
-      md:w-[225px] md:h-[122px] md:right-[40px] md:top-[-13px]
+      sm:w-[225px] sm:h-[122px] sm:right-[40px] sm:top-[-13px]
       lg:right-[-40px] lg:top-[35px]
-      lg:w-[370px] lg:h-[200px] rounded-2xl xl:right-[-90px] dark:bg-black-700 md:block;
+      lg:w-[370px] lg:h-[200px] rounded-2xl xl:right-[-90px] dark:bg-black-700 sm:block;
   }
   &-clients {
     @apply flex flex-col pb-5 
@@ -70,7 +72,7 @@
       @apply flex-1 min-w-0 w-full lg:w-auto;
     }
     &__slide {
-      @apply h-4.5 xs:h-6 sm:h-7 lg:h-[1.70rem] w-auto !important;
+      @apply h-4.5 xs:h-6 sm:h-6 md:h-7 lg:h-[1.70rem] w-auto !important;
       img {
         @apply h-full;
       }
