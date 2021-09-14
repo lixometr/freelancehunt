@@ -82,7 +82,7 @@
 
 .for-orders {
   &-slider {
-    @apply -mx-5 md:px-5 !important;
+    @apply -mx-5 sm:px-5 !important;
   }
   &-item {
     @apply flex flex-col relative min-h-[240px] shadow-main py-7 px-5 md:p-7 bg-white rounded-xl

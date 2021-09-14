@@ -1,8 +1,5 @@
 import Swiper from "swiper";
-import breakpoints from "./breakpoints";
 import { bpLess } from "./helpers";
-import { Tags } from "./tags";
-import { useResize } from "./useResize";
 
 export class TabsCategories {
   constructor(el) {
@@ -132,7 +129,6 @@ export class TabsCategories {
         } else {
           swiperContainer.classList.remove("last");
         }
-        // console.log(active, total, e);
       });
     } else {
       if (this.categoriesSlider) {

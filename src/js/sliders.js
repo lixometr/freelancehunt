@@ -12,10 +12,6 @@ import breakpoints from "./breakpoints";
         slidesPerView: "auto",
         spaceBetween: 27,
         breakpoints: {
-          // [breakpoints.sm]: {
-          //   slidesPerView: 'auto',
-          //   spaceBetween: 77
-          // },
           [breakpoints.xs]: {
             slidesPerView: "auto",
             spaceBetween: 0,
@@ -46,7 +42,7 @@ new Swiper(".for-orders-slider", {
   slidesOffsetAfter: 20,
   slidesOffsetBefore: 20,
   breakpoints: {
-    [breakpoints.md]: {
+    [breakpoints.sm]: {
       resistanceRatio: 0,
       slidesPerView: 2,
       spaceBetween: 24,

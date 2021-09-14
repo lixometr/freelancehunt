@@ -22,9 +22,6 @@
         @apply block sm:hidden;
       }
     }
-    &__content {
-      /* @apply mt-5; */
-    }
     &__items {
       @apply space-y-2;
     }

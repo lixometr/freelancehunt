@@ -29,7 +29,7 @@ h3 {
 }
 
 .section-offset {
-  @apply pt-20 md:pt-[130px];
+  @apply pt-20 md:pt-[8.125rem];
 }
 .pre-title {
   @apply text-sm text-text-disabled font-normal uppercase;
@@ -70,11 +70,4 @@ h3 {
     @apply visible opacity-60;
   }
 }
-@define-mixin bg $url, $url2x {
-  background-image: url($url);
-  @media all and (-webkit-min-device-pixel-ratio: 1.5) {
-    & {
-      background-image: url($url2x);
-    }
-  }
-}
+

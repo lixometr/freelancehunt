@@ -1,6 +1,5 @@
 import { eventMixin } from "./event";
 import { onReady } from "./helpers";
-import { Menu } from "./menu";
 import useStopScroll from "./useStopScroll";
 class HeaderMenu {
   constructor() {
@@ -29,14 +28,8 @@ class HeaderMenu {
     if (this.isOpen) return;
     this.el.classList.add("open");
     this.el.classList.add("opened");
-    const onEnd = () => {
-      if (this.isOpen) {
-        this.overlay.classList.add("open");
-      }
+    this.overlay.classList.add("open");
 
-      this.el.removeEventListener("transitionend", onEnd);
-    };
-    this.el.addEventListener("transitionend", onEnd);
     this.isOpen = true;
     this.emit("open");
 
@@ -132,9 +125,6 @@ class HeaderMenu {
         });
         this.headerMenu.addEventListener("mouseenter", () => {
           this.gonnaClose = false;
-          // if (!this.isOpen) {
-          //   this.open();
-          // }
         });
       }
     });
@@ -147,53 +137,11 @@ class HeaderMenu {
 }
 onReady(() => {
   const menu = new HeaderMenu();
-  const header = document.querySelector(".header");
-
-  const menus = [
-    // new Menu(
-    //   ".header-menu-orders",
-    //   ".header-menu-overlay",
-    //   ".header__menu-item[data-popup='orders']"
-    // ),
-    // new Menu(
-    //   ".header-menu-freelancers",
-    //   ".header-menu-overlay",
-    //   ".header__menu-item[data-popup='freelancers']"
-    // ),
-    // new Menu(
-    //   ".header-menu-vacancies",
-    //   ".header-menu-overlay",
-    //   ".header__menu-item[data-popup='vacancies']"
-    // ),
-  ];
-  let menuOpen = false;
-  let scrollMore = false;
   const { stop: stopScroll, reset: resetScroll } = useStopScroll();
-  // menus.forEach((menu) => {
   menu.on("open", () => {
-    header.classList.add("fix");
-    menuOpen = true;
     stopScroll();
   });
   menu.on("close", () => {
-    menuOpen = false;
     resetScroll();
-
-    if (scrollMore) return;
-    header.classList.remove("fix");
   });
-  // });
-  const checkScroll = () => {
-    const scrollTop = window.scrollY;
-    if (scrollTop > 20) {
-      header.classList.add("fix");
-      scrollMore = true;
-    } else {
-      scrollMore = false;
-      if (menuOpen) return;
-      header.classList.remove("fix");
-    }
-  };
-  checkScroll();
-  window.addEventListener("scroll", checkScroll);
 });

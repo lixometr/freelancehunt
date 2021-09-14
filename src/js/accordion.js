@@ -1,4 +1,4 @@
-import { hide, show, toggle } from "slidetoggle";
+import { hide, show } from "slidetoggle";
 import { eventMixin } from "./event";
 export class Accordion {
   constructor(el, defaultValue = false) {
@@ -19,10 +19,6 @@ export class Accordion {
       miliseconds: 300,
     });
     this.emit("open");
-    // const listener = () => {
-    //   this.content.removeEventListener("transitionend", listener);
-    // };
-    // this.content.addEventListener("transitionend", listener);
   }
   close() {
     if (!this.isOpen) return;
