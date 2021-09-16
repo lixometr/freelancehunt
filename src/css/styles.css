@@ -21,13 +21,13 @@
     @apply relative pb-12 flex flex-col sm:items-start md:pb-20;
   }
   &__content {
-    @apply order-2 md:order-1  md:relative md:max-w-[500px] lg:max-w-[660px] z-10;
+    @apply order-2 text-center sm:text-left md:order-1  md:relative md:max-w-[500px] lg:max-w-[660px] z-10;
   }
   &__description {
-    @apply max-w-[280px] md:max-w-[380px] lg:max-w-[450px] text-sm md:text-lg lg:text-2xl !font-medium text-text-subdued;
+    @apply max-w-[280px] mx-auto sm:mx-0 md:max-w-[380px] lg:max-w-[450px] text-sm md:text-lg lg:text-2xl !font-medium text-text-subdued;
   }
   &__image {
-    @apply w-full relative order-1 mb-3 
+    @apply w-full relative order-1 mb-4 
     max-w-[460px]
     mx-auto
     sm:max-w-none
