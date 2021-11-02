@@ -182,6 +182,376 @@
                     "cnt": 2
                 }
             ]
+        },
+        {
+            "categoryName": "Услуги",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Аудио и видео",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Продвижение",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Архитектура и инжиниринг",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Мобильные приложения",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Администрирование",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Аутсорсинг и консталтинг",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Переводы",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Работа с текстами",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
+        },
+        {
+            "categoryName": "Дизайн и арт",
+            "more": {
+                "cnt": "22 000",
+                "text": "дизайнера"
+            },
+            "main": {
+                "image": "img/freelancers/main.png",
+                "name": "Артем Полищук",
+                "category": "Веб-программирование",
+                "rate": "9,2",
+                "reviews": "999 отзывов"
+            },
+            "items": [
+                "img/freelancers/3.png",
+                "img/freelancers/2.png",
+                "img/freelancers/1.png"
+            ],
+            "tags": [
+                {
+                    "name": "php",
+                    "cnt": 2
+                },
+                {
+                    "name": "Python",
+                    "cnt": 2
+                },
+                {
+                    "name": "Ruby",
+                    "cnt": 2
+                },
+                {
+                    "name": "Машинное обучение",
+                    "cnt": 2
+                }
+            ]
         }
     ],
     "projects": [
